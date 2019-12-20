@@ -4,6 +4,12 @@ source/_minted*
 # Fichiers de compilation
 source/*.gz
 source/*.toc
+source/*.pyg
+source/*.log
+source/*.out
+source/*.aux
+source/*.fls
+source/*.fdb*
 
-# Fichier compilé
+# PDF compilés
 source/*.pdf

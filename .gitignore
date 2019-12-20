@@ -1,0 +1,6 @@
+# Dossier à ignore
+source/_minted*
+
+# Fichiers de compilation
+source/*.gz
+source/*.toc

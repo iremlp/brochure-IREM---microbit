@@ -1,0 +1,268 @@
+\babel@toc {french}{}
+\contentsline {section}{À propos de cette publication}{5}{section*.2}%
+\contentsline {subsection}{Pourquoi les objets connectés?}{5}{section*.3}%
+\contentsline {subsection}{Qui sommes-nous?}{6}{section*.4}%
+\contentsline {subsection}{Liens utiles}{6}{section*.5}%
+\contentsline {section}{À propos de la carte {\large \texttt {Micro:bit}}\xspace }{7}{section*.6}%
+\contentsline {subsection}{Bref historique}{7}{section*.7}%
+\contentsline {subsection}{La carte {\large \texttt {Micro:bit}}\xspace }{7}{section*.8}%
+\contentsline {subsection}{Programmer la carte {\large \texttt {Micro:bit}}\xspace \emph {par blocs}}{9}{section*.9}%
+\contentsline {subsubsection}{Une interface en ligne}{9}{section*.10}%
+\contentsline {subsubsection}{Un simulateur !}{9}{section*.11}%
+\contentsline {subsubsection}{Compilation et enregistrement}{10}{section*.12}%
+\contentsline {subsubsection}{Programmation par bloc}{10}{section*.13}%
+\contentsline {subsubsection}{Documentation}{10}{section*.14}%
+\contentsline {subsection}{Programmer la carte {\large \texttt {Micro:bit}}\xspace en \emph {Python}}{10}{section*.15}%
+\contentsline {subsubsection}{Une interface en ligne}{10}{section*.16}%
+\contentsline {subsubsection}{Mu : une interface complète}{11}{section*.17}%
+\contentsline {subsubsection}{Programmation}{11}{section*.18}%
+\contentsline {subsubsection}{Communication série}{11}{section*.19}%
+\contentsline {subsubsection}{Documentation}{12}{section*.20}%
+\contentsline {section}{Borne de satisfaction avec {\large \texttt {Micro:bit}}\xspace }{13}{section*.21}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{13}{section*.22}%
+\contentsline {subsubsection}{Objectif}{13}{section*.23}%
+\contentsline {subsubsection}{Intérêt}{13}{section*.24}%
+\contentsline {subsubsection}{Matériel}{13}{section*.25}%
+\contentsline {subsection}{Niveau initiation - Premier modèle}{14}{section*.26}%
+\contentsline {subsubsection}{Activité élève}{14}{section*.27}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{15}{section*.28}%
+\contentsline {subsection}{Niveau expert - Cumuler les votes}{16}{section*.29}%
+\contentsline {subsubsection}{Activité élève}{16}{section*.30}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{17}{section*.31}%
+\contentsline {section}{Les fractions avec {\large \texttt {Micro:bit}}\xspace }{18}{section*.32}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{18}{section*.33}%
+\contentsline {subsubsection}{Objectif}{18}{section*.34}%
+\contentsline {subsubsection}{Intérêt}{18}{section*.35}%
+\contentsline {subsubsection}{Matériel}{18}{section*.36}%
+\contentsline {subsection}{Écrire une fraction}{19}{section*.37}%
+\contentsline {subsubsection}{Activité élève}{19}{section*.38}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{19}{section*.39}%
+\contentsline {subsection}{Afficher une fraction}{20}{section*.40}%
+\contentsline {subsubsection}{Activité élève}{20}{section*.41}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{20}{section*.42}%
+\contentsline {subsection}{Somme de fractions}{21}{section*.43}%
+\contentsline {subsubsection}{Activité élève}{21}{section*.44}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{21}{section*.45}%
+\contentsline {section}{Dé à 6 faces avec {\large \texttt {Micro:bit}}\xspace }{22}{section*.46}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{22}{section*.47}%
+\contentsline {subsubsection}{Objectif}{22}{section*.48}%
+\contentsline {subsubsection}{Intérêt}{22}{section*.49}%
+\contentsline {subsubsection}{Matériel}{22}{section*.50}%
+\contentsline {subsection}{Niveau simple}{23}{section*.51}%
+\contentsline {subsubsection}{Activité élève}{23}{section*.52}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{23}{section*.53}%
+\contentsline {subsection}{Niveau intermédiaire}{24}{section*.54}%
+\contentsline {subsubsection}{Activité élève}{24}{section*.55}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{25}{section*.56}%
+\contentsline {section}{Normal ou truqué? avec {\large \texttt {Micro:bit}}\xspace }{26}{section*.57}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{26}{section*.58}%
+\contentsline {subsubsection}{Objectif}{26}{section*.59}%
+\contentsline {subsubsection}{Intérêt}{26}{section*.60}%
+\contentsline {subsubsection}{Matériel}{26}{section*.61}%
+\contentsline {subsubsection}{Progression}{26}{section*.62}%
+\contentsline {subsection}{Activité}{27}{section*.63}%
+\contentsline {subsubsection}{Activité élève}{27}{section*.64}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{28}{section*.65}%
+\contentsline {section}{Pile ou face avec {\large \texttt {Micro:bit}}\xspace }{29}{section*.66}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{29}{section*.67}%
+\contentsline {subsubsection}{Objectif}{29}{section*.68}%
+\contentsline {subsubsection}{Intérêt}{29}{section*.69}%
+\contentsline {subsubsection}{Matériel}{29}{section*.70}%
+\contentsline {subsection}{Niveau simple}{30}{section*.71}%
+\contentsline {subsubsection}{Activité élève}{30}{section*.72}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{31}{section*.73}%
+\contentsline {subsection}{Niveau intermédiaire}{32}{section*.74}%
+\contentsline {subsubsection}{Activité élève}{32}{section*.75}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{33}{section*.76}%
+\contentsline {subsection}{Niveau expert}{34}{section*.77}%
+\contentsline {subsubsection}{Activité élève}{34}{section*.78}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{35}{section*.79}%
+\contentsline {section}{Fluctuation d'échantillonnage avec {\large \texttt {Micro:bit}}\xspace }{36}{section*.80}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{36}{section*.81}%
+\contentsline {subsubsection}{Objectif}{36}{section*.82}%
+\contentsline {subsubsection}{Intérêt}{36}{section*.83}%
+\contentsline {subsubsection}{Matériel}{36}{section*.84}%
+\contentsline {subsubsection}{Progression proposée}{37}{section*.85}%
+\contentsline {subsection}{Niveau prise en main - Vérifier le modèle\ldots }{38}{section*.86}%
+\contentsline {subsubsection}{Activité élève}{38}{section*.87}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{38}{section*.88}%
+\contentsline {subsection}{Niveau intermédiaire - Générer des échantillons\ldots }{40}{section*.89}%
+\contentsline {subsubsection}{Activité élève}{40}{section*.90}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{41}{section*.91}%
+\contentsline {subsection}{Niveau avancée - Produire des données\ldots }{42}{section*.92}%
+\contentsline {subsubsection}{Activité élève}{42}{section*.93}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{43}{section*.94}%
+\contentsline {section}{Chutes et oscillations avec {\large \texttt {Micro:bit}}\xspace }{44}{section*.95}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{44}{section*.96}%
+\contentsline {subsubsection}{Objectif}{44}{section*.97}%
+\contentsline {subsubsection}{Intérêt}{44}{section*.98}%
+\contentsline {subsubsection}{Matériel}{44}{section*.99}%
+\contentsline {subsection}{Niveau simple}{45}{section*.100}%
+\contentsline {subsubsection}{Activité élève}{45}{section*.101}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{46}{section*.102}%
+\contentsline {subsection}{Niveau intermédiaire}{47}{section*.103}%
+\contentsline {subsubsection}{Activité élève}{47}{section*.104}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{48}{section*.105}%
+\contentsline {section}{Mémo \texttt {Micro:bit (et python)}\xspace }{49}{section*.106}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/microbit-python.png}\par 
+\contentsline {subsection}{Des commandes pour aller plus loin}{52}{section*.107}%
+\contentsline {subsubsection}{Représentation graphique avec \texttt {Mu}}{52}{section*.108}%
+\contentsline {subsubsection}{Des images personnalisées}{52}{section*.109}%
+\contentsline {subsubsection}{Des animations personnalisées}{52}{section*.110}%
+\contentsline {subsubsection}{Faire parler {\large \texttt {Micro:bit}}\xspace }{53}{section*.111}%
+\contentsline {subsubsection}{De la musique}{53}{section*.112}%
+\contentsline {subsubsection}{Les fichiers}{54}{section*.113}%
+\contentsline {section}{Mémo : les blocs principaux {\large \texttt {Micro:bit}}\xspace }{57}{section*.114}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {section}{Ton premier programme avec {\large \texttt {Micro:bit}}\xspace }{60}{section*.115}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mb.png}\par 
+\contentsline {subsection}{Description}{60}{section*.116}%
+\contentsline {subsubsection}{Objectif}{60}{section*.117}%
+\contentsline {subsubsection}{Intérêt}{60}{section*.118}%
+\contentsline {subsubsection}{Matériel}{60}{section*.119}%
+\contentsline {subsubsection}{Pour commencer}{60}{section*.120}%
+\contentsline {subsubsection}{Prise en main}{60}{section*.121}%
+\contentsline {subsubsection}{Définition du programme}{61}{section*.122}%
+\contentsline {subsubsection}{Création du programme}{61}{section*.123}%
+\contentsline {subsubsection}{Explication du programme}{62}{section*.124}%
+\contentsline {section}{Commande de base pour \texttt {Micro:bit (et python)}\xspace }{63}{section*.125}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/microbit-python.png}\par 
+\contentsline {subsection}{Description}{63}{section*.126}%
+\contentsline {subsubsection}{Objectif}{63}{section*.127}%
+\contentsline {subsubsection}{Matériel}{63}{section*.128}%
+\contentsline {subsection}{Commandes essentielles}{63}{section*.129}%
+\contentsline {subsubsection}{Le module {\mintinline [bgcolor=grisClair]{python}{microbit}} }{63}{section*.130}%
+\contentsline {subsubsection}{Micropython dans la carte {\large \texttt {Micro:bit}}\xspace }{64}{section*.131}%
+\contentsline {subsubsection}{Afficher un texte}{64}{section*.132}%
+\contentsline {subsubsection}{Des images}{65}{section*.133}%
+\contentsline {subsubsection}{Des animations}{65}{section*.134}%
+\contentsline {subsubsection}{Des boutons}{66}{section*.135}%
+\contentsline {subsubsection}{Le hasard}{67}{section*.136}%
+\contentsline {subsubsection}{Le mouvement}{67}{section*.137}%
+\contentsline {subsubsection}{Les gestes}{67}{section*.138}%
+\contentsline {subsubsection}{La radio}{68}{section*.139}%
+\contentsline {subsubsection}{La boussole}{68}{section*.140}%
+\contentsline {subsection}{Des commandes pour aller plus loin}{70}{section*.141}%
+\contentsline {subsubsection}{Représentation graphique avec \texttt {Mu}}{70}{section*.142}%
+\contentsline {subsubsection}{Des images personnalisées}{70}{section*.143}%
+\contentsline {subsubsection}{Des animations personnalisées}{70}{section*.144}%
+\contentsline {subsubsection}{Faire parler {\large \texttt {Micro:bit}}\xspace }{71}{section*.145}%
+\contentsline {subsubsection}{De la musique}{71}{section*.146}%
+\contentsline {subsubsection}{Les fichiers}{72}{section*.147}%
+\contentsline {section}{Simuler un dé avec \texttt {Micro:bit (et python)}\xspace }{75}{section*.148}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/microbit-python.png}\par 
+\contentsline {subsection}{Description}{75}{section*.149}%
+\contentsline {subsubsection}{Objectif}{75}{section*.150}%
+\contentsline {subsubsection}{Intérêt}{75}{section*.151}%
+\contentsline {subsubsection}{Matériel}{75}{section*.152}%
+\contentsline {subsubsection}{Remarques}{75}{section*.153}%
+\contentsline {subsection}{Niveau initiation}{77}{section*.154}%
+\contentsline {subsubsection}{Activité élève}{77}{section*.155}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{77}{section*.156}%
+\contentsline {subsection}{Niveau intermédiaire}{79}{section*.157}%
+\contentsline {subsubsection}{Activité élève}{79}{section*.158}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{80}{section*.159}%
+\contentsline {subsection}{Niveau avancé}{81}{section*.160}%
+\contentsline {subsubsection}{Activité élève}{81}{section*.161}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{82}{section*.162}%
+\contentsline {section}{Pile ou face communicant avec \texttt {Micro:bit (et python)}\xspace }{83}{section*.163}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/microbit-python.png}\par 
+\contentsline {subsection}{Description}{83}{section*.164}%
+\contentsline {subsubsection}{Objectif}{83}{section*.165}%
+\contentsline {subsubsection}{Intérêt}{83}{section*.166}%
+\contentsline {subsubsection}{Matériel}{83}{section*.167}%
+\contentsline {subsubsection}{Progression proposée}{83}{section*.168}%
+\contentsline {subsection}{Niveau simple}{84}{section*.169}%
+\contentsline {subsubsection}{Activité élève}{84}{section*.170}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{85}{section*.171}%
+\contentsline {subsection}{Niveau Expert}{86}{section*.172}%
+\contentsline {subsubsection}{Activité élève}{86}{section*.173}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{87}{section*.174}%
+\contentsline {section}{Robot \texttt {Maqueen}\xspace et capteur de distance}{88}{section*.175}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-maqueen.png}\par 
+\contentsline {subsection}{Description}{88}{section*.176}%
+\contentsline {subsubsection}{Objectif}{88}{section*.177}%
+\contentsline {subsubsection}{Intérêt}{88}{section*.178}%
+\contentsline {subsubsection}{Matériel}{88}{section*.179}%
+\contentsline {subsubsection}{Remarques}{89}{section*.180}%
+\contentsline {subsection}{Niveau initiation - Utilisation du capteur de distance à ultrasons}{91}{section*.181}%
+\contentsline {subsubsection}{Activité élève}{91}{section*.182}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{91}{section*.183}%
+\contentsline {subsection}{Niveau intermédiaire - Étalonnage du capteur}{92}{section*.184}%
+\contentsline {subsubsection}{Activité élève}{92}{section*.185}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{92}{section*.186}%
+\contentsline {subsection}{Niveau expert - Robot autonome}{93}{section*.187}%
+\contentsline {subsubsection}{Activité élève}{93}{section*.188}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{93}{section*.189}%
+\contentsline {section}{Déterminer une vitesse avec \texttt {MBot}\xspace }{94}{section*.190}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mbot.png}\par 
+\contentsline {subsection}{Description}{94}{section*.191}%
+\contentsline {subsubsection}{Objectif}{94}{section*.192}%
+\contentsline {subsubsection}{Intérêt}{94}{section*.193}%
+\contentsline {subsubsection}{Matériel}{94}{section*.194}%
+\contentsline {subsubsection}{Remarques}{94}{section*.195}%
+\contentsline {subsection}{Niveau initiation - Programmer le déplacement de \texttt {MBot}\xspace }{95}{section*.196}%
+\contentsline {subsubsection}{Activité élève}{95}{section*.197}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{95}{section*.198}%
+\contentsline {subsection}{Niveau intermédiaire - Déterminer la vitesse de \texttt {MBot}\xspace }{96}{section*.199}%
+\contentsline {subsubsection}{Activité élève}{96}{section*.200}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{96}{section*.201}%
+\contentsline {section}{Vitesse de rotation avec MBot}{97}{section*.202}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mbot.png}\par 
+\contentsline {subsection}{Description}{97}{section*.203}%
+\contentsline {subsubsection}{Objectif}{97}{section*.204}%
+\contentsline {subsubsection}{Intérêt}{97}{section*.205}%
+\contentsline {subsubsection}{Matériel}{97}{section*.206}%
+\contentsline {subsubsection}{Remarques}{97}{section*.207}%
+\contentsline {subsection}{Niveau initiation}{98}{section*.208}%
+\contentsline {subsubsection}{Activité élève}{98}{section*.209}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{98}{section*.210}%
+\contentsline {section}{Variation de vitesses avec MBot}{99}{section*.211}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-mbot.png}\par 
+\contentsline {subsection}{Description}{99}{section*.212}%
+\contentsline {subsubsection}{Objectif}{99}{section*.213}%
+\contentsline {subsubsection}{Intérêt}{99}{section*.214}%
+\contentsline {subsubsection}{Matériel}{99}{section*.215}%
+\contentsline {subsubsection}{Remarques}{99}{section*.216}%
+\contentsline {subsection}{Niveau initiation - Nature du mouvement}{100}{section*.217}%
+\contentsline {subsubsection}{Activité élève}{100}{section*.218}%
+\contentsline {subsection}{Niveau expert - Mouvement décéléré}{101}{section*.219}%
+\contentsline {subsubsection}{Activité élève}{101}{section*.220}%
+\contentsline {section}{Normal ou truqué? avec \texttt {STM32 Éducation}\xspace }{102}{section*.221}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-st.png}\par 
+\contentsline {subsection}{Description}{102}{section*.222}%
+\contentsline {subsubsection}{Objectif}{102}{section*.223}%
+\contentsline {subsubsection}{Intérêt}{102}{section*.224}%
+\contentsline {subsubsection}{Matériel}{102}{section*.225}%
+\contentsline {subsubsection}{Progression}{102}{section*.226}%
+\contentsline {subsection}{Activité}{103}{section*.227}%
+\contentsline {subsubsection}{Activité élève}{103}{section*.228}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{104}{section*.229}%
+\contentsline {section}{Pile ou face avec \texttt {STM32 Éducation}\xspace }{105}{section*.230}%
+\nobreak \vspace \smallskipamount \includegraphics [height=2\baselineskip ]{res/mini-st.png}\par 
+\contentsline {subsection}{Description}{105}{section*.231}%
+\contentsline {subsubsection}{Objectif}{105}{section*.232}%
+\contentsline {subsubsection}{Intérêt}{105}{section*.233}%
+\contentsline {subsubsection}{Matériel}{105}{section*.234}%
+\contentsline {subsection}{Progression proposée}{106}{section*.235}%
+\contentsline {subsection}{Niveau initiation - Premier modèle }{107}{section*.236}%
+\contentsline {subsubsection}{Activité élève}{107}{section*.237}%
+\contentsline {subsubsection}{Notes pour l'enseignant}{107}{section*.238}%
+\contentsline {subsection}{Niveau intermédiaire - Pile ou Face}{108}{section*.239}%
+\contentsline {subsubsection}{Activité élève}{108}{section*.240}%
+\contentsline {subsection}{Notes pour l'enseignant}{109}{section*.241}%
+\contentsline {subsection}{Niveau intermédiaire - 16 tirages}{110}{section*.242}%
+\contentsline {subsubsection}{Activité élève}{110}{section*.243}%
+\contentsline {subsection}{Niveau expert - Initialisation}{112}{section*.244}%
+\contentsline {subsubsection}{Activité élève}{112}{section*.245}%
+\contentsline {subsection}{Niveau expert - 32 tirages}{114}{section*.246}%
+\contentsline {subsubsection}{Activité élève}{114}{section*.247}%
+\contentsline {subsection}{Niveau expert - Enregistrer les effectifs}{116}{section*.248}%
+\contentsline {subsubsection}{Activité élève}{116}{section*.249}%

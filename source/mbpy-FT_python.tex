@@ -1,0 +1,553 @@
+\section{Mémo \mbpy}
+\logo{mbpy}
+\pagestyle{mbpy}
+
+\begin{methode}[Essentiel]
+	Importer toutes les fonctions
+	~\hfill \pylineGrand{from microbit import *}
+	
+	Faire une pause {\small(en ms)}
+	\hfill \pylineGrand {sleep(...)}\\
+\end{methode}
+
+
+
+\begin{minipage}[t]{0.6\linewidth}
+\begin{methode}[Écrire dans un terminal]
+	\rule{-0.25em}{2em}
+	Écrire du \textbf{texte} (\texttt{string})
+	~\hfill \pylineGrand {print()}\\
+	~\hfill \ex \pyline {print('Bouton A : 5 fois')}\\
+	
+	Aligner avec des \textbf{tabulations}
+	~\hfill \pylineGrand {'\t'}\\
+	~\hfill \ex \pyline {print('Bouton \tA\t:\t5 fois')}\\
+	
+	\textbf{Sauter} des lignes
+	~\hfill \pylineGrand {'\n'} \\
+	~\hfill \ex \pyline {print('Bouton A :\n5 fois\n')}\\
+	
+	\textbf{Convertir} en chaînes (\texttt{string})
+	~\hfill \pylineGrand {str()}\\
+	~\hfill \ex \pyline {print('Bouton A :' + str(5) +' fois')}\\
+\end{methode}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}
+\begin{remarque}
+	\rule{-0.25em}{1.7em}
+	Activer la \textbf{communication série}\\[0.5em]
+	\hfill
+	\includegraphics[height=2.5em]{res/ft_repl.png}
+	\hfill
+	\includegraphics[height=2.5em]{res/ft_01.png}
+	\hfill~
+\end{remarque}
+
+\begin{center}
+	\includegraphics[height=8em]{res/logo-algo.png}
+\end{center}
+\end{minipage}
+
+
+
+\begin{minipage}[t]{0.6\linewidth}
+	\begin{methode}[LED \mb]
+		\rule{-0.25em}{2em}
+		\textbf{Afficher} texte/image
+		\hfill \pylineGrand {display.scroll()}\\
+		~\hfill \ex \pyline {display.scroll("G")}\\
+		~\hfill \ex \pyline {display.scroll(Image.HEART)}\\
+		
+		Faire \textbf{défiler} texte/image
+		\hfill \pylineGrand {display.show()}\\
+		~\hfill \ex \pyline {display.show("Gagne !")}\\
+		~\hfill \ex \pyline {display.show(Image.HAPPY)}\\
+		
+		Créer des \textbf{animations}
+		\hfill \pylineGrand {delay=...}\\
+		~\hfill \ex\pyline {display.show(Image.ALL_CLOCKS, delay=200)}\\
+		
+		Modifier \textbf{pixel}
+		\hfill \pylineGrand {display.set_pixel(x,y,lum)}\\
+		\textit{\footnotesize (lum = luminosité $[$0;9$]$)}
+		\hfill \ex \pyline {display.set_pixel(0,4,9)}\\
+		
+		\textbf{Effacer} l'écran
+		\hfill \pylineGrand {display.clear()}\\
+	\end{methode}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}~\\[1.5em]
+\hfill
+\includegraphics[width=0.35\linewidth]{res/mb-fluctuations-illustration.png}
+\hfill
+\includegraphics[width=0.35\linewidth]{res/mbpy-init-heart.png}
+\hfill~
+\\[0em]
+\begin{remarque}
+	\rule{-0.25em}{1.7em}
+	\hfill Pour créer/utiliser des \textbf{animations},\\
+	\hfill $\implies$ \textbf{tableaux d'images}.
+	
+	\ex \pyline{Image.ALL_CLOCKS} (lignes)\\
+	\ex \pyline{Image.ALL_ARROWS} (flèches)\\
+\end{remarque}	
+\end{minipage}
+
+\setlength{\columnsep}{4pt}
+\begin{multicols}{4}
+	\texttt{Image.HEART}\\
+	\texttt{Image.HEART\_SMALL}\\
+	\texttt{Image.HAPPY}\\
+	\texttt{Image.SMILE}\\
+	\texttt{Image.SAD}\\
+	\texttt{Image.CONFUSED}\\
+	\texttt{Image.ANGRY}\\
+	\texttt{Image.ASLEEP}\\
+	\texttt{Image.SURPRISED}\\
+	\texttt{Image.SILLY}\\
+	\texttt{Image.FABULOUS}\\
+	\texttt{Image.MEH}\\
+	\texttt{Image.YES}\\
+	\texttt{Image.NO}\\
+	%\columnbreak
+	\texttt{Image.CLOCK12}\\
+	\texttt{Image.CLOCK11}\\
+	\texttt{...}\\
+	\texttt{Image.CLOCK1}\\
+	\texttt{Image.ARROW\_N}\\
+	\texttt{Image.ARROW\_NE}\\
+	\texttt{Image.ARROW\_E}\\
+	\texttt{Image.ARROW\_SE}\\
+	\texttt{Image.ARROW\_S}\\
+	\texttt{Image.ARROW\_SW}\\
+	\texttt{Image.ARROW\_W}\\
+	\texttt{Image.ARROW\_NW}\\
+	%\columnbreak
+	\texttt{Image.TRIANGLE}\\
+	\texttt{Image.TRIANGLE\_LEFT}\\
+	\texttt{Image.CHESSBOARD}\\
+	\texttt{Image.DIAMOND}\\
+	\texttt{Image.DIAMOND\_SMALL}\\
+	\texttt{Image.SQUARE}\\
+	\texttt{Image.SQUARE\_SMALL}\\
+	\texttt{Image.RABBIT}\\
+	\texttt{Image.COW}\\
+	\texttt{Image.MUSIC\_CROTCHET}\\
+	\texttt{Image.MUSIC\_QUAVER}\\
+	\texttt{Image.MUSIC\_QUAVERS}\\
+	\texttt{Image.PITCHFORK}\\
+	\texttt{Image.XMAS}\\
+	\texttt{Image.PACMAN}\\
+	\texttt{Image.TARGET}\\
+	\texttt{Image.TSHIRT}\\
+	\texttt{Image.ROLLERSKATE}\\
+	\texttt{Image.DUCK}\\
+	\texttt{Image.HOUSE}\\
+	\texttt{Image.TORTOISE}\\
+	\texttt{Image.BUTTERFLY}\\
+	\texttt{Image.STICKFIGURE}\\
+	\texttt{Image.GHOST}\\
+	\texttt{Image.SWORD}\\
+	\texttt{Image.GIRAFFE}\\
+	\texttt{Image.SKULL}\\
+	\texttt{Image.UMBRELLA}\\
+	\texttt{Image.SNAKE}
+\end{multicols}
+
+
+\begin{minipage}{0.72\linewidth}
+\begin{methode}[Les boutons]
+	\rule{-0.25em}{2em}
+	Accéder aux \textbf{boutons} A ou B
+	\hfill \pylineGrand {button_a. ...}\\
+	~\hfill \pylineGrand {button_b. ...}\\
+
+	Nombre d'appuis (\textbf{cumul})
+	\hfill \pylineGrand {button_a.get_presses()}\\
+	\hfill \pylineGrand {button_b.get_presses()}\\
+	\hfill \ex \pyline {display.scroll(str(button_a.get_presses()))}\\
+	
+	Tester si bouton \textbf{est} pressé
+	\hfill \pylineGrand {button_a.is_pressed()}\\
+	\hfill \pylineGrand {button_b.is_pressed()}\\
+	\hfill \ex \pyline {if (button_b.is_pressed()):print("Bouton B")}\\
+	
+	Tester si bouton \textbf{a été} pressé
+	\hfill \pylineGrand {button_a.was_pressed()}\\
+	\textit{\footnotesize (appeler 2 $\times$ la fonction)}
+	\hfill \pylineGrand {button_b.was_pressed()}\\
+	\hfill \ex \pyline {if (button_b.was_pressed()):display.show(Image.HAPPY)}\\
+	
+	Utiliser les \textbf{broches}
+	\hfill \pylineGrand {pin0.is_touched()}\\
+	\hfill \pylineGrand {pin1.is_touched()}\\
+	\hfill \pylineGrand {pin2.is_touched()}\\
+	
+\end{methode}
+\end{minipage}
+\hfill
+\begin{minipage}{0.28\linewidth}
+	\begin{center}
+		\includegraphics[width=10em]{res/ft_bouton_hand.png}\\[2em]
+		\includegraphics[width=10em]{res/ft_pin_hand.png}
+	\end{center}
+\end{minipage}
+
+\begin{remarque}
+	\rule{-0.25em}{1.7em}
+	Détecter un \textbf{évènement}, avec une \textbf{boucle infinie}.
+	\hfill	\ex \pyline{while True:}\\
+	
+	Pour \textbf{sortir d'une boucle} lorsque l'évènement est détecté :
+	\hfill \ex \pyline{break}\\
+\end{remarque}
+
+\begin{minipage}{0.75\linewidth}
+	\begin{methode}[Aléa]
+		\rule{-0.25em}{2em}
+			Activer le module \textbf{hasard}
+			\hfill \pylineGrand{import random}\\
+			
+			Nombre \textbf{aléatoire} sur $[$0~;~1$]$
+			\hfill  \pylineGrand{random.random()}\\
+			\hfill \ex \pyline {display.show(round(random.random(),3))}\\
+			
+			Nombre \textbf{entier} aléatoire sur $[$a ; b$]$
+			\hfill  \pylineGrand{random.randint(a,b)}\\
+			\hfill \ex \pyline {display.show(random.randint(1,6))}\\
+	\end{methode}
+\end{minipage}
+\hfill 
+\begin{minipage}{0.25\linewidth}
+	\begin{center}
+		\includegraphics[width=0.8\linewidth]{res/mbpy-de.png}
+	\end{center}
+\end{minipage}
+
+
+
+
+
+
+\begin{minipage}[t]{0.75\linewidth}
+	\begin{methode}[Mouvement]
+		\rule{-0.25em}{2em}\textbf{1 coord.} vect. accélération
+		\hfill \pylineGrand{accelerometer.get_x()}\\
+		\hfill \pylineGrand{accelerometer.get_y()}\\
+		\hfill \pylineGrand{accelerometer.get_z()}\\
+		\hfill \ex \pyline {display.show(accelerometer.get_x())}\\
+		
+		\textbf{3 coord.} vect. (tuple)
+		\hfill \pylineGrand{accelerometer.get_values()}\\
+		\hfill \ex \pyline {print(accelerometer.get_values())}\\
+		
+		Historique \textbf{gestes} (tuple)
+		\hfill  \pylineGrand{accelerometer.get_gestures()}\\
+		\textit{\footnotesize (appeler 2 $\times$ la fonction)}
+		\hfill \ex \pyline {print(accelerometer.get_gestures())}\\
+		
+		Tester geste \textbf{actuel}
+		\hfill  \pylineGrand{accelerometer.is_gesture('...')}\\
+		
+		Tester geste \textbf{passé}
+		\hfill  \pylineGrand{accelerometer.was_gesture('...')}\\
+		\textit{\footnotesize (appeler 2 $\times$ la fonction)}		
+	\end{methode}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\linewidth}
+	\strut\vspace*{-\baselineskip}\newline
+	\begin{center}
+		\includegraphics[width=1\linewidth]{res/ft_microbit_axes}
+	\end{center}
+	
+	\textbf{Gestes} reconnus
+	\begin{multicols}{2}
+		\texttt{'up'}\\
+		\texttt{'down'}\\
+		\texttt{'left'}\\
+		\texttt{'right'}\\
+		\texttt{'face up'}\\
+		\texttt{'face down'}\\
+		\texttt{'freefall'}\\
+		\texttt{'3g'}\\
+		\texttt{'6g'}\\
+		\texttt{'8g'}\\
+		\texttt{'shake'}
+	\end{multicols}
+
+	\hfill \includegraphics[width=0.4\linewidth]{res/mbChutes.png}
+\end{minipage}
+
+
+
+
+
+\begin{minipage}{0.7\linewidth}
+	\begin{methode}[Radio]
+		\rule{-0.25em}{2em}
+		Activer le \textbf{module} radio
+		\hfill \pylineGrand{import radio}\\
+		
+		\textbf{Mettre en route} la radio
+		\hfill \pylineGrand{radio.on()}\\
+		
+		\textbf{Envoyer} un message
+		\hfill \pylineGrand{radio.send('...')}\\
+		\hfill \ex \pyline{radio.send('pile')}\\
+		
+		\textbf{Message} reçu (string) 
+		\textit{\footnotesize (=\pyline{None}si vide)}
+		\hfill \pylineGrand {radio.receive()}\\
+		\hfill \ex \pyline {if (radio.receive()=='pile'): print('Pile')}\\
+		
+		\textbf{Canal} perso $(\leq$ 100$\big )$
+		\hfill \pylineGrand{radio.config(channel=..)}\\	
+		\hfill \ex \pyline{radio.config(channel=21)}\\
+		
+		\textbf{Puissance} perso $(\leq$ 7$\big )$
+		\hfill \pylineGrand{radio.config(power=..)}\\
+		\hfill \ex \pyline{radio.config(power=7)}\\
+	\end{methode}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{res/ft_radio.png}\\
+	\end{center}
+	\hfill \scalebox{-1}[1]{\includegraphics[width=0.2\linewidth]{res/ft_radio.png}}
+\end{minipage}
+
+
+
+
+\begin{minipage}{0.6\linewidth}
+	\begin{methode}[Boussole]
+		\rule{-0.25em}{2em}\textbf{1 coord.} vect. champ magnétique
+		\hfill \pylineGrand{compass.get_x()}\\
+		\hfill \pylineGrand{compass.get_y()}\\
+		\hfill \pylineGrand{compass.get_z()}\\
+		\hfill \ex \pyline {display.show(compass.get_x())}\\
+		
+		\textbf{Angle} (en $^\circ$) avec le nord
+		\hfill \pylineGrand{compass.heading()}\\
+		\catcode`\%=11
+		\hfill \ex \pyline {aiguille=((15-compass.heading())//30)%12}\\
+		\catcode`\%=14
+		\textbf{Calibrer} la boussole
+		\hfill \pylineGrand {compass.calibrate()}\\
+	\end{methode}
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\linewidth}
+	\begin{center}
+		\includegraphics[width=0.4\linewidth]{res/ft_microbit-features-compass.png}
+	\end{center}
+\begin{remarque}
+	\rule{-0.25em}{1.7em}
+	\textbf{Toujours} calibrer la boussole.\\[1em]
+	
+	Mesures/valeurs \textbf{fluctuantes}\\
+	{\small(présence de métal, d'aimants, etc.)}
+\end{remarque}
+\end{minipage}
+
+
+
+
+\newpage
+
+\subsection{Des commandes pour aller plus loin}
+\cartouche{2 h}{2de}{}{}{affichage ; bouton ; événement ; son}
+
+
+\subsubsection{Représentation graphique avec \texttt{Mu}}
+
+Il est possible de tracer un \textbf{nuage de points} avec l'IDE \texttt{Mu}.
+
+Pour cela, il faut 
+\begin{itemize}
+    \item utiliser l'outil \texttt{Graphique} de l'IDE \texttt{Mu},
+    \item faire afficher par le programme en cours d'exécution un tuple de nombres.
+\end{itemize}
+
+
+\begin{methode}
+Le programme ci-dessous affiche dans le terminal (ou \textbf{dans le Graphique} si l'outil de l'IDE est cliqué) des fréquences d'apparitions lors d'une expérience aléatoire.
+\pyfile{244}{258}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+
+
+\subsubsection{Des images personnalisées}
+
+Les images sont des objets qui peuvent être créées grâce au constructeur \pyline{Image("string")}.\par
+Le texte \pyline{"string"} permet de décrire, \textbf{ligne par ligne}, la luminosité de chaque pixel de l'écran de LED. Pour chaque diode, la valeur varie de 0 (éteinte) à 9 (luminosité maximale). Pour séparer les lignes, il faut utiliser le symbole \pyline{":"}
+
+\begin{methode}
+Voici une image représentant un bateau avec la coque plus foncée que les 2 mâts :
+\pyfile{31}{38}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+\begin{remarque}
+\textbf{Pour aller plus loin}, vous pouvez consulter les pages  \href{https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html}{Introduction >> Images} ou \href{https://microbit-micropython.readthedocs.io/fr/latest/image.html}{Image} de la documentation officielle.
+\end{remarque}
+
+
+\subsubsection{Des animations personnalisées}
+
+En stockant des images personnalisées dans un tableau, il est possible de créer des \emph{animations personnalisées}.
+
+\begin{methode}
+Créer un image représentant un tableau et stocker cette image dans la variable \pyline{bateau1} :
+\pyfile{47}{52}{./res/mbpy-initiationPython.py.tex}
+
+Créer d'autres images (donnant l'illusion que le bateau s'enfonce) et les stocker dans de nouvelles variables:
+\pyfile{54}{58}{./res/mbpy-initiationPython.py.tex}\\
+\pyfile{60}{64}{./res/mbpy-initiationPython.py.tex}\\
+\pyfile{66}{70}{./res/mbpy-initiationPython.py.tex}\\
+\pyfile{72}{76}{./res/mbpy-initiationPython.py.tex}\\
+\pyfile{78}{82}{./res/mbpy-initiationPython.py.tex}
+
+Créer un tableau regroupant toutes les images et afficher l'animation :
+\pyfile{84}{85}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+\begin{remarque}
+\textbf{Pour aller plus loin}, vous pouvez consulter la page  \href{https://microbit-micropython.readthedocs.io/fr/latest/tutorials/images.html}{Introduction >> Images} de la documentation officielle.
+\end{remarque}
+
+
+\subsubsection{Faire parler \mb}
+
+La carte \mb peut aussi \textbf{parler}.
+Avant cela, il faut connecter un casque audio ou un (petit) haut-parleur à la carte.
+
+\begin{center}
+\includegraphics[width=3cm]{res/mbpy-init-audio.png}    
+\end{center}
+
+Le module \pyline{speech} contient les fonctions permettant de gérer la \emph{voix} de \mb, dont la fonction \pyline{speech.say("string")} qui fera parler.
+
+\begin{methode}
+\pyfile{16}{18}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+\begin{remarque}
+\textbf{Pour aller plus loin}, vous pouvez consulter les pages  \href{https://microbit-micropython.readthedocs.io/fr/latest/tutorials/speech.html}{Introduction >> Speech} ou \href{https://microbit-micropython.readthedocs.io/fr/latest/speech.html}{Speech} de la documentation officielle.
+\end{remarque}
+
+
+\subsubsection{De la musique}
+
+La carte \mb est capable de jouer de la musique. Pour cela, il faut au préalable \textbf{connecter un casque audio} ou un petit haut-parleur à la carte.
+
+\begin{center}
+\includegraphics[width=3cm]{res/mbpy-init-audio.png}    
+\end{center}
+
+Le module \pyline{music} contient les fonctions permettant de gérer et de contrôler le son. Parmi elles, la fonction \pyline{music.play()} joue une mélodie.
+
+Par ailleurs, le module  \pyline{music} contient aussi un grand nombre de mélodies enregistrée (ie. déjà programmées) comme par exemple :
+\begin{itemize}
+    \item \texttt{music.DADADADUM},
+    \item \texttt{music.ENTERTAINER} ou encore
+    \item \texttt{music.PRELUDE}.
+\end{itemize}
+
+
+\begin{methode}
+Voici comment jouer la musique \pyline{POWER_UP} avec \mb :
+
+\pyfile{10}{12}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+La carte \mb peut aussi générer un son en fonction de sa fréquence. Pour cela, il faut utiliser la fonction \pyline{music.pitch(freq, duree)} qui va générer pendant \pyline{duree} millisecondes le son de frequence \pyline{freq}.
+
+\begin{methode}
+    Le code ci-dessous génère une sirène qui passe d'un son grave à un son aigu puis qui redevient grave.\par
+    Chaque fois que le son redevient grave, la boucle teste si le bouton B \emph{a été} pressé. Si c'est la cas, le programme quitte la boucle.
+    
+    \pyfile{109}{118}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+\begin{methode}
+    Le programme ci-dessous génère un son dépendant de l'inclinaison du \mb.\\
+    Le bouton B permet de quitter cette boucle.
+    
+    \pyfile{148}{155}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+\begin{remarque}
+\textbf{Pour aller plus loin}, vous pouvez consulter les pages  \href{https://microbit-micropython.readthedocs.io/fr/latest/tutorials/music.html#}{Introduction >> Musique} ou \href{https://microbit-micropython.readthedocs.io/fr/latest/music.html#}{Music} de la documentation officielle.
+\end{remarque}
+
+
+\subsubsection{Les fichiers}
+
+La carte \mb peut stocker des fichiers. Ces derniers ne sont pas accessibles par le système classique de fichiers, mais par l'intermédiaire de l'outil \texttt{Fichier} de l'IDE \texttt{Mu}.
+
+Il est tout à fait possible d'utiliser Python pour lire, créer, modifier ou effacer un fichier.
+
+\begin{methode}
+    Pour \textbf{lister les fichiers} présents sur la carte \mb, il faut utiliser le module \pyline{os}.\par
+    La fonction \pyline{os.listdir()} renvoie alors une liste de chaîne de caractère. Chaque élément de la liste est un nom de fichier.
+\begin{minted}[bgcolor=grisClair]{python}
+import os
+listeFichiers = os.listdir()
+\end{minted}
+\end{methode}
+
+\begin{methode}
+    Pour \textbf{lire le contenu} d'un fichier (qui doit exister), il faut :
+    \begin{itemize}
+        \item créer une instance de fichier en mode lecture \pyline{'r'}
+        \item utiliser la méthode \pyline{.read()} pour copier le contenu du fichier dans une variable.
+    \end{itemize}~\\
+    
+    L'exemple ci-dessous lit le fichier \pyline{texte.txt}, copie son contenu dans la variable \pyline{txt} et l'afficher dans le terminal :
+\begin{minted}[bgcolor=grisClair]{python}
+with open('texte.txt','r') as monFichier:
+    txt = monFichier.read()
+print(txt)
+\end{minted}
+\end{methode}
+
+\begin{methode}
+    Pour \textbf{écrire un texte} dans un fichier (qui peut ne pas exister), il faut :
+    \begin{itemize}
+        \item créer une instance de fichier en mode écriture \pyline{'w'}
+        \item utiliser la méthode \pyline{.write("string")} pour écrire le texte dans le fichier (attention, si le fichier existait déjà, cela supprimera tout ce que le fichier contenait).
+    \end{itemize}~\\
+    
+    L'exemple ci-dessous ouvre le fichier \pyline{texte.txt} en écriture puis écrase son contenu avec le contenu de la variable \pyline{txt}.
+\begin{minted}[bgcolor=grisClair]{python}
+txt = "1,2,3\n4,5,6"
+with open('texte.txt','w') as monFichier:
+    monFichier.write(txt)
+\end{minted}
+\end{methode}
+
+\begin{methode}
+    Le programme ci-dessous effectue 50 tirages aléatoires qu'il enregistre dans le fichier \texttt{save.txt}.
+    
+    \begin{itemize}
+        \item importer tous les modules nécessaires
+        \item sauvegarder les 50 tirages dans la variable \pyline{txt}
+        \item établir la liste des fichiers
+        \item si le fichier \texttt{save.txt} existe, lire le fichier et sauvegarder ses données dans la variable \pyline{contenu}
+        \item ouvrir le fichier en mode écriture et l'écraser avec le contenu mis à jour.
+    \end{itemize}
+    
+    \pyfile{189}{192}{./res/mbpy-initiationPython.py.tex}\\
+    \pyfile{193}{198}{./res/mbpy-initiationPython.py.tex}\\
+    \pyfile{199}{200}{./res/mbpy-initiationPython.py.tex}\\
+    \pyfile{201}{206}{./res/mbpy-initiationPython.py.tex}\\
+    \pyfile{207}{210}{./res/mbpy-initiationPython.py.tex}
+\end{methode}
+
+\begin{remarque}
+\textbf{Pour aller plus loin}, vous pouvez consulter les pages  \href{https://microbit-micropython.readthedocs.io/fr/latest/tutorials/storage.html}{Introduction >> Storage} ou \href{https://microbit-micropython.readthedocs.io/fr/latest/filesystem.html}{Local Persistent File System} de la documentation officielle.
+\end{remarque}

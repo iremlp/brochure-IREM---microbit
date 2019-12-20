@@ -1,0 +1,416 @@
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2.5cm,footskip=1em,includefoot]{geometry}
+%\usepackage[a4paper,margin=2cm,bottom=2cm,top=2cm,footskip=3em,includefoot]{geometry}%,landscape
+\usepackage{amsmath,amsfonts,mathrsfs,amssymb,amsthm}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{parskip}% http://ctan.org/pkg/parskip
+%\usepackage{array}
+
+%%Couleurs et URL
+\usepackage{xcolor}
+\definecolor{deepblue}{rgb}{0.3,0.3,0.8}
+\definecolor{darkblue}{rgb}{0,0,0.3}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{iremred}{RGB}{204,35,50}%% ROUGE IREM
+\definecolor{deepgreen}{rgb}{0,0.6,0}
+\definecolor{backcolor}{rgb}{0.98,0.95,0.95}
+\definecolor{gris}{rgb}{0.91,0.91,0.91}
+\definecolor{grisClair}{rgb}{0.95,0.95,0.95}
+\definecolor{bleuamu}{RGB}{20,118,198}
+\definecolor{cyanamu}{RGB}{77,198,244}
+\definecolor{noiramu}{RGB}{35,31,32}
+\definecolor{orangeamu}{RGB}{250,178,11} %original
+\definecolor{blocBase}{RGB}{30,144,255} %makeCode blocs "Base"
+\definecolor{blocBoucle}{RGB}{0,170,0}
+\definecolor{blocLogique}{RGB}{0,164,166}
+\definecolor{blocVariable}{RGB}{220,20,60}
+\definecolor{blocMaths}{RGB}{148,0,211}
+\definecolor{blocEntrees}{RGB}{212,0,212}
+\definecolor{blocFonctions}{RGB}{52,85,219}
+\definecolor{blocRadio}{RGB}{227,0,140}
+\usepackage[colorlinks=true, allcolors=deepred]{hyperref}
+
+%% pour utiliser les dingbat il faut dédéfinir \checkmark
+\let\checkmark\undefined
+\usepackage{dingbat}
+
+%% itemize perso
+\usepackage{enumitem}
+
+%%
+\usepackage{calc}
+
+%%% Language
+%\usepackage[english]{babel}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\usepackage[frenchb]{babel}
+
+%python
+\usepackage{minted}
+%\usemintedstyle{native}
+
+\newmintedfile[pyfichier]{python}{
+bgcolor=grisClair,
+}
+
+
+\newcommand{\pyline}[1]{
+    {\mintinline[bgcolor=grisClair]{python}{#1}}
+}
+
+
+
+\newcommand{\pylineGrand}[1]{
+%{\Large\mintinline[bgcolor=grisClair]{python}{#1}}
+{\Large\mintinline{python}{#1}}
+}
+\newcommand{\pyfile}[3]{
+    %\vspace{-0.5em}
+    \pyfichier[firstline=#1,lastline=#2]{#3}
+    \vspace{-2em}
+}
+
+
+%pour ajouter au besoin les espaces après les commandes persos
+\usepackage{xspace}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{avant}
+%\usepackage{lmodern}
+
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\labelenumi}{{\textbf{\arabic{enumi}})}}
+\renewcommand{\labelenumii}{{\textbf{\alph{enumii}}.}} %--
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\geq}{\geqslant}
+
+
+%smiley
+\usepackage{wasysym}
+
+
+%% chemin des images et ressources
+\graphicspath{{./res/}}
+
+\newcounter{exercice}
+\newcommand{\exo}[1]{% Titre
+	\refstepcounter{exercice}
+	\vspace{0em} \par \noindent
+	\raisebox{-0.7ex}{\textbf{Exercice \no \arabic{exercice}}}
+	\hrulefill\raisebox{-0.7ex}{ \textbf{#1}}
+	\par  %\vspace{0.3em} \noindent%
+}
+
+%
+% Configuration des environnements de textes
+\usepackage{xeboiboites}
+%
+% exemple
+\newbreakabletheorem[
+    small box style={fill=deepblue!90,draw=deepblue!15, rounded corners,line width=1pt},%
+    big box style={fill=deepblue!5,draw=deepblue!15,thick,rounded corners,line width=1pt},%
+    headfont={\color{white}\bfseries}
+        ]{exemple}{Exemple}{}%{counterCo}
+%
+% remarque
+\newbreakabletheorem[
+    small box style={draw=orangeamu!100,line width=2pt,fill=orangeamu!0,rounded corners,decoration=penciline, decorate},%
+	big box style={color=orangeamu!90,fill=orangeamu!10,thick,decoration={penciline},decorate},
+    broken edges={draw=orangeamu!90,thick,fill=orange!20!black!5, decoration={random steps, segment length=.5cm,amplitude=1.3mm},decorate},%
+    other edges={decoration=penciline,decorate,thick},%
+    headfont={\color{orangeamu}\large\sc\bfseries}
+    ]{remarque}{Remarque}{}%{counterCa}
+%
+% formule (sans titre)
+\newboxedequation[%
+    big box style={fill=cyanamu!10,draw=cyanamu!100,thick,decoration=penciline,decorate}]%
+    {form}
+%
+% méthode
+\newbreakabletheorem[
+    small box style={fill=bleuamu!100, draw=bleuamu!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=bleuamu!10,draw=bleuamu!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{methode}{Méthode}{}
+%
+
+
+% méthode blocBase
+\newbreakabletheorem[
+    small box style={fill=blocBase!100, draw=blocBase!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocBase!10,draw=blocBase!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocBase}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-base.png}}{}
+%
+
+% méthode blocBoucle
+\newbreakabletheorem[
+    small box style={fill=blocBoucle!100, draw=blocBoucle!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocBoucle!10,draw=blocBoucle!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocBoucle}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-boucles.png}}{}
+%
+
+% méthode blocEntrees
+\newbreakabletheorem[
+    small box style={fill=blocEntrees!100, draw=blocEntrees!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocEntrees!10,draw=blocEntrees!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocEntrees}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-entrees.png}}{}
+%
+
+% méthode blocLogique
+\newbreakabletheorem[
+    small box style={fill=blocLogique!100, draw=blocLogique!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocLogique!10,draw=blocLogique!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocLogique}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-logique.png}}{}
+%
+
+% méthode blocVariable
+\newbreakabletheorem[
+    small box style={fill=blocVariable!100, draw=blocVariable!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocVariable!10,draw=blocVariable!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocVariable}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-variables.png}}{}
+%
+
+% méthode blocMaths
+\newbreakabletheorem[
+    small box style={fill=blocMaths!100, draw=blocMaths!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocMaths!10,draw=blocMaths!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocMaths}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-maths.png}}{}
+%
+
+% méthode blocFonctions
+\newbreakabletheorem[
+    small box style={fill=blocFonctions!100, draw=blocFonctions!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocFonctions!10,draw=blocFonctions!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocFonctions}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-fonctions.png}}{}
+%
+
+% méthode blocRadio
+\newbreakabletheorem[
+    small box style={fill=blocRadio!100, draw=blocRadio!60, line width=1pt,rounded corners,decorate},%
+    big box style={fill=blocRadio!10,draw=blocRadio!30,thick,rounded corners,decorate},
+    headfont={\color{white}\large\sc\bfseries}
+        ]{blocRadio}{\includegraphics[width=8em]{res/blocsMkCd/MB_makecode_cat-radio.png}}{}
+%
+
+
+% astuce
+\newspanning[
+    image=fig-idee,headfont=\bfseries,
+    spanning style={very thick,decoration=penciline,decorate}
+    ]{astuce}{Astuce}{}
+%
+% activité
+\newbreakabletheorem[
+    small box style={draw=orangeamu!100,line width=2pt,fill=orangeamu!100,rounded corners,decoration=penciline, decorate},%
+	big box style={color=orangeamu!100,fill=orangeamu!5,thick,decoration={penciline},decorate},
+    broken edges={draw=orangeamu!100,thick,fill=orangeamu!100, decoration={random steps, segment length=.5cm,amplitude=1.3mm},decorate},%
+    other edges={decoration=penciline,decorate,thick},%
+    headfont={\color{white}\large\scshape\bfseries}
+    ]{activite}{\includegraphics[height=1cm]{res/investigation.png}Activité}{}%{counterCa}
+%   
+%   environnement élève
+%
+\newenvironment{eleve}%
+%{\begin{activite}\large\\} % écrire plus gros
+{\begin{activite}\color{noiramu}\\}
+{\end{activite}}
+
+\newenvironment{formule}%
+%{\begin{activite}\large\\} % écrire plus gros
+{\begin{form}\color{bleuamu}}
+{\end{form}}
+
+\usepackage{colortbl}
+
+%% cartouche
+\newcommand{\cartouche}[5]{%
+\begin{center}
+\begin{tabularx}{\linewidth}{	>{\centering\arraybackslash}m{0.150\linewidth}
+		*5{!{\color{white}\vline width 1.5em}>{\centering\arraybackslash}m{0.150\linewidth}}}
+%\hline
+\includegraphics[width=\linewidth]{res/logo-duree.png}
+\scriptsize{Durée}
+& \includegraphics[width=\linewidth]{res/logo-public.png}
+\scriptsize{Public}
+& \includegraphics[width=\linewidth]{res/logo-math.png}
+\scriptsize{Maths}
+& \includegraphics[width=\linewidth]{res/logo-science.png}
+\scriptsize{Sciences}
+& \includegraphics[width=\linewidth]{res/logo-algo.png}
+\scriptsize{Algo}
+\tabularnewline \rowcolor{gris}
+#1 & #2 & #3 & #4 & #5
+\end{tabularx}\\~
+\end{center}
+}
+
+%%
+%% commandes perso
+%%
+% pour microbit
+\newcommand{\mb}{{\large\texttt{Micro:bit}}\xspace}
+\newcommand{\matosMb}{~\includegraphics[height=1.5cm]{res/mini-mb.png}~\mb}
+% pour microbit en python
+\newcommand{\mbpy}{\texttt{Micro:bit (et python)}\xspace}
+\newcommand{\matosMbpy}{~\includegraphics[height=1.5cm]{res/microbit-python.png}~\mbpy}
+% pour maqueen
+\newcommand{\mq}{\texttt{Maqueen}\xspace}
+\newcommand{\matosMq}{~\includegraphics[height=1.5cm]{res/mini-maqueen.png}~\mq}
+% pour ST
+\newcommand{\st}{\texttt{STM32 Éducation}\xspace}
+\newcommand{\matosSt}{~\includegraphics[height=1.5cm]{res/mini-st.png}~\st}
+% pour Mbot
+\newcommand{\mbot}{\texttt{MBot}\xspace}
+\newcommand{\matosMbot}{~\includegraphics[height=1.5cm]{res/mini-mbot.png}~\mbot}
+
+\newcommand{\ex}{{\footnotesize \textit{\underline{ex.} {\tiny\smallpencil}\xspace}}}
+
+\newcommand{\muEditor}{{\Large\texttt{Mu}}\xspace\includegraphics[width=1.5em]{res/ft_icon_mu.png}\xspace}
+
+
+% configuration des 
+% en-tête et pied de pages
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% affichage des section*/subsection* 
+%\renewcommand{\chaptermark}[1]{\markright{\MakeUppercase{#1}}}
+\newcommand{\headerfmt}[1]{\textsl{\textsc{\Large{#1}}}}
+\newcommand{\headerfmtpage}[1]{\textsc{\Large{#1}}}
+% configuration par défaut
+% dans le style PLAIN
+\fancypagestyle{plain}{%
+    \setlength{\headheight}{33pt}
+    \fancyhead{}
+    \fancyfoot[L]{
+    	\href{http://url.univ-irem.fr/mars}{\includegraphics[height=1cm]{res/fig-logo-irem.png}}}
+    \fancyfoot[C]{\thepage}
+    \fancyfoot[R]{
+    \href{http://url.univ-irem.fr/ineflp}{\includegraphics[height=1cm]{res/fig-ineflp-qr.png}
+    \includegraphics[height=1cm]{fig-logo-ineflp}}}
+    }
+% configuration perso
+% pour Micro:bit
+\fancypagestyle{mb}{%
+    \setlength{\headheight}{33pt}
+    \fancyhead{}
+    \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
+    \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
+    \fancyhead[R]{\includegraphics[height=1cm]{res/mini-mb.png}}
+}
+% configuration perso
+% pour Micro:bit avec python
+\fancypagestyle{mbpy}{%
+    \setlength{\headheight}{33pt}
+    \fancyhead{}
+    \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
+    \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
+    \fancyhead[R]{\includegraphics[height=1cm]{res/microbit-python.png}}
+}
+
+% pour Maqueen
+\fancypagestyle{mq}{%
+    \setlength{\headheight}{33pt}
+    \fancyhead{}
+    \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
+    \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
+    \fancyhead[R]{\includegraphics[height=1cm]{res/mini-maqueen.png}}
+}
+
+% pour mBot
+\fancypagestyle{mbot}{%
+    \setlength{\headheight}{33pt}
+    \fancyhead{}
+    \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
+    \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
+    \fancyhead[R]{\includegraphics[height=1cm]{res/mini-mbot.png}}
+}
+% configuration perso
+% pour ST
+\fancypagestyle{st}{%
+    \setlength{\headheight}{33pt}
+    \fancyhead{}
+    \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
+    \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
+    \fancyhead[R]{\includegraphics[height=1cm]{res/mini-st.png}}
+}
+\pagestyle{plain}
+
+
+% Images & flottantes
+\usepackage{graphicx}
+\usepackage{wrapfig} 	%images encadrées
+\intextsep=0cm			%image à la même hauteur que le texte
+
+
+% numérotation des sections
+%     et table des matières
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+
+
+% style de notes
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+%
+%   personnaliser les titres/soustitres
+\usepackage{sectsty}
+\sectionfont{
+    \sectionrule{1ex}{0pt}{0ex}{0pt} %un peu plus d'espace
+    \centering\Huge\color{noiramu}} %couleur et centré
+\subsectionfont{%
+    \sectionrule{0.5ex}{0pt}{0ex}{0pt} %un peu plus d'espace
+    \sf\bfseries\LARGE\color{orangeamu}\scshape}
+\subsubsectionfont{\large\color{bleuamu}}
+% espace entre les titres
+
+
+
+%   modification de \emph (qui permet de mettre en évidence du texte)
+
+\let\emph\relax % there's no \RedeclareTextFontCommand
+\DeclareTextFontCommand{\emph}{\em\normalfont\color{bleuamu}}
+
+%
+%   document non justifié mais aligné à gauche
+
+\usepackage[document]{ragged2e}
+
+%   images dans les titres
+\newcommand{\addstufftotoc}[2][toc]{% \addimagetotoc[<toc>]{<stuff>}
+  \addtocontents{#1}{#2}}
+\newcommand{\icon}[1]{\addstufftotoc{\nobreak\smallskip\protect\includegraphics[height=2\baselineskip]{#1}\par}}
+\usepackage{ifthen}
+\newcommand{\logo}[1]{%
+  \ifthenelse{\equal{#1}{mb}}
+    {\icon{res/mini-mb.png}}
+    {}%
+  \ifthenelse{\equal{#1}{mbpy}}
+    {\icon{res/microbit-python.png}}
+    {}% 
+  \ifthenelse{\equal{#1}{mq}}
+    {\icon{res/mini-maqueen.png}}
+    {}% 
+  \ifthenelse{\equal{#1}{mbot}}
+    {\icon{res/mini-mbot.png}}
+    {}%
+  \ifthenelse{\equal{#1}{st}}
+    {\icon{res/mini-st.png}}
+    {}%
+}
+
+% figure sans numérotation
+\usepackage{ccaption}

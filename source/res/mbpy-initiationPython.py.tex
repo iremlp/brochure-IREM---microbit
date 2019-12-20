@@ -1,0 +1,267 @@
+from microbit import *
+
+# Hello World !
+from microbit import *
+display.scroll("Hello,")
+display.show("World!")
+
+
+# Musique
+from microbit import *
+import music
+music.play(music.POWER_UP)
+
+
+# Parole
+from microbit import *
+import speech
+speech.say("Hello, World")
+
+
+# Images et écran de LED
+from microbit import *
+display.show(Image.HAPPY)
+sleep(1000)
+display.show(Image.ANGRY)
+sleep(1000)
+display.clear()
+
+
+# Images personnalisées
+from microbit import *
+bateau = Image("05050:"
+               "05050:"
+               "05050:"
+               "99999:"
+               "09990")
+display.show(bateau)
+sleep(1000)
+
+
+# Animations
+from microbit import *
+display.show(Image.ALL_CLOCKS, delay=200)
+
+
+# Animations personnalisées
+from microbit import *
+bateau1 = Image("05050:"
+                "05050:"
+                "05050:"
+                "99999:"
+                "09990")
+
+bateau2 = Image("00000:"
+                "05050:"
+                "05050:"
+                "05050:"
+                "99999")
+
+bateau3 = Image("00000:"
+                "00000:"
+                "05050:"
+                "05050:"
+                "05050")
+
+bateau4 = Image("00000:"
+                "00000:"
+                "00000:"
+                "05050:"
+                "05050")
+
+bateau5 = Image("00000:"
+                "00000:"
+                "00000:"
+                "00000:"
+                "05050")
+
+bateau6 = Image("00000:"
+                "00000:"
+                "00000:"
+                "00000:"
+                "00000")
+
+tous_bateaux = [bateau1, bateau2, bateau3, bateau4, bateau5, bateau6]
+display.show(tous_bateaux, delay=200)
+
+
+# Boutons
+from microbit import *
+sleep(10000)
+display.scroll(str(button_a.get_presses()))
+
+
+# Boutons et boucle infinie
+from microbit import *
+while True:
+    if button_a.is_pressed():
+        display.show(Image.HAPPY)
+    elif pin1.is_touched():
+        display.show(Image.ASLEEP)
+    elif button_b.is_pressed():
+        display.clear()
+        break
+    else:
+        display.show(Image.SAD)
+
+
+# Boutons et musique
+from microbit import *
+import music
+button_b.was_pressed()
+while True:
+    for freq in range(880, 1760, 16):
+        music.pitch(freq, 6)
+    for freq in range(1760, 880, -16):
+        music.pitch(freq, 6)
+    if button_b.was_pressed():
+        break
+
+
+# Aléa
+from microbit import *
+import random
+for i in range(50):
+    display.show(random.randint(1, 6))
+    sleep(20)
+sleep(1000)
+display.clear()
+
+
+# Mouvement
+from microbit import *
+button_b.was_pressed()
+while True:
+    capteur = accelerometer.get_x()
+    if capteur > 40:
+        display.show(Image.ARROW_E)
+    elif capteur < -40:
+        display.show(Image.ARROW_W)
+    else:
+        display.show("-")
+    if button_b.was_pressed():
+        display.clear()
+        break
+
+
+# Mouvement et musique
+from microbit import *
+import music
+button_b.was_pressed()
+while True:
+    ton = max(0, accelerometer.get_y())
+    music.pitch(ton, 10)
+    if button_b.was_pressed():
+        break
+
+
+# Mouvements et gestes
+# up, down, left, right,
+# face up, face down,
+# freefall, 3g, 6g, 8g,
+# shake
+from microbit import *
+import random
+button_b.was_pressed()
+while True:
+    display.show("8")
+    if accelerometer.was_gesture("shake"):
+        display.clear()
+        sleep(1000)
+        display.scroll(random.choice(["Oui","Non"]))
+    if button_b.was_pressed():
+        break
+
+
+# Boussole
+from microbit import *
+compass.calibrate()
+button_b.was_pressed()
+while True:
+    cap = ((15 - compass.heading()) // 30) % 12
+    display.show(Image.ALL_CLOCKS[cap])
+    if button_b.was_pressed():
+        display.clear()
+        break
+
+
+# Fichiers et sauvegardes
+# sauvegarder 50 nb aléatoires
+from microbit import *
+import random
+import os
+txt = ""
+for i in range(50):
+    nb = random.randint(1, 6)
+    txt = txt + str(nb)
+    display.show(nb)
+    sleep(20)
+# connaître la liste des fichiers sur MB
+listeFichiers = os.listdir()
+# si le fichier 'save.txt' existe, récupérer le contenu
+if ('save.txt' in listeFichiers):
+    with open('save.txt','r') as monFichier:
+        contenu = monFichier.read()
+else:
+    contenu = ""
+with open('save.txt','w') as monFichier:
+    contenu = contenu + txt + "\n"
+    print(contenu)
+    monFichier.write(contenu)
+
+
+from microbit import *
+import radio
+import random
+button_a.was_pressed()
+button_b.was_pressed()
+while True:
+    # émetteur
+    if button_a.was_pressed():
+        radio.send("A")
+    if button_b.was_pressed():
+        radio.send("B")
+    # récepteur
+    incomming = radio.receive()
+    if incomming == "A":
+        display.scroll("A")
+    if incomming == "B":
+        display.scroll("B")
+    # sortir de la boucle
+    if pin0.is_touched():
+        display.clear()
+        break
+    sleep(20)
+
+
+# Communication série
+from microbit import *
+for i in range(10):
+    print("Hello, World!")
+
+
+# Communication série (REPL), random et affichage graphique
+from microbit import *
+import random
+while True:
+    if button_a.was_pressed():        
+        nb1 = 0
+        total = 0
+        for i in range(1000):
+            # tirage aléatoire
+            tirage = random.randint(0,1)
+            total = total + 1
+            # calcul d'effectifs
+            nb1 = nb1 + tirage
+            nb0 = total - nb1
+            # affichage dans le terminal
+            print((i, nb1/total, nb0/total))
+    if button_b.was_pressed():
+        break
+
+
+
+# Fin
+from microbit import *
+display.clear()
+music.play(music.POWER_DOWN)

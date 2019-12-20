@@ -4,3 +4,6 @@ source/_minted*
 # Fichiers de compilation
 source/*.gz
 source/*.toc
+
+# Brochure compilée
+main.pdf

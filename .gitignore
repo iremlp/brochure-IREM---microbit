@@ -5,5 +5,5 @@ source/_minted*
 source/*.gz
 source/*.toc
 
-# Brochure compilée
-main.pdf
+# Fichier compilé
+source/*.pdf

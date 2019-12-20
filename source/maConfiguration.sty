@@ -2,13 +2,25 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2.5cm,footskip=1em,includefoot]{geometry}
+\usepackage[a4paper,
+    left=2cm,
+    right=2cm,
+    top=2cm,
+    bottom=2cm,
+    footskip=33pt,
+    headheight=33pt,
+    headsep=0pt
+    % includefoot
+    ]{geometry}
 %\usepackage[a4paper,margin=2cm,bottom=2cm,top=2cm,footskip=3em,includefoot]{geometry}%,landscape
 \usepackage{amsmath,amsfonts,mathrsfs,amssymb,amsthm}
 \usepackage{tabularx}
 \usepackage{multicol}
 \usepackage{parskip}% http://ctan.org/pkg/parskip
 %\usepackage{array}
+\usepackage[export]{adjustbox} %pour alignement includegraphics
+
+
 
 %%Couleurs et URL
 \usepackage{xcolor}
@@ -50,7 +62,7 @@
 \usepackage{natbib}
 \usepackage{graphicx}
 
-\usepackage[frenchb]{babel}
+\usepackage[french]{babel}
 
 %python
 \usepackage{minted}
@@ -76,6 +88,14 @@ bgcolor=grisClair,
     \pyfichier[firstline=#1,lastline=#2]{#3}
     \vspace{-2em}
 }
+
+\newenvironment{mucode}
+ {\VerbatimEnvironment
+  \begin{minted}[
+      bgcolor=white,
+    %   linenos,
+      ]{python}}
+ {\end{minted}}
 
 
 %pour ajouter au besoin les espaces après les commandes persos
@@ -262,7 +282,7 @@ bgcolor=grisClair,
 %% commandes perso
 %%
 % pour microbit
-\newcommand{\mb}{{\large\texttt{Micro:bit}}\xspace}
+\newcommand{\mb}{{\texttt{Micro:bit}}\xspace}
 \newcommand{\matosMb}{~\includegraphics[height=1.5cm]{res/mini-mb.png}~\mb}
 % pour microbit en python
 \newcommand{\mbpy}{\texttt{Micro:bit (et python)}\xspace}
@@ -293,7 +313,7 @@ bgcolor=grisClair,
 % configuration par défaut
 % dans le style PLAIN
 \fancypagestyle{plain}{%
-    \setlength{\headheight}{33pt}
+    \renewcommand{\headrulewidth}{1pt}
     \fancyhead{}
     \fancyfoot[L]{
     	\href{http://url.univ-irem.fr/mars}{\includegraphics[height=1cm]{res/fig-logo-irem.png}}}
@@ -305,7 +325,7 @@ bgcolor=grisClair,
 % configuration perso
 % pour Micro:bit
 \fancypagestyle{mb}{%
-    \setlength{\headheight}{33pt}
+    \pagestyle{plain}
     \fancyhead{}
     \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
     \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
@@ -314,7 +334,7 @@ bgcolor=grisClair,
 % configuration perso
 % pour Micro:bit avec python
 \fancypagestyle{mbpy}{%
-    \setlength{\headheight}{33pt}
+    \pagestyle{plain}
     \fancyhead{}
     \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
     \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
@@ -323,7 +343,7 @@ bgcolor=grisClair,
 
 % pour Maqueen
 \fancypagestyle{mq}{%
-    \setlength{\headheight}{33pt}
+    \pagestyle{plain}
     \fancyhead{}
     \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
     \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
@@ -332,7 +352,7 @@ bgcolor=grisClair,
 
 % pour mBot
 \fancypagestyle{mbot}{%
-    \setlength{\headheight}{33pt}
+    \pagestyle{plain}
     \fancyhead{}
     \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
     \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
@@ -341,12 +361,35 @@ bgcolor=grisClair,
 % configuration perso
 % pour ST
 \fancypagestyle{st}{%
-    \setlength{\headheight}{33pt}
+    \pagestyle{plain}
     \fancyhead{}
     \fancyhead[L]{\texttt{\headerfmtpage{\small\thepage}}}
     \fancyhead[L]{\texttt{\headerfmt{\small\rightmark}}}
     \fancyhead[R]{\includegraphics[height=1cm]{res/mini-st.png}}
 }
+
+% fiches Techniques élèves
+% pour FT
+
+\fancypagestyle{ft}{%
+    \pagestyle{plain}
+    \renewcommand{\headrulewidth}{0pt}
+    \newgeometry{top=1.5cm,left=1cm,right=1cm,bottom=1cm}
+    % \newgeometry{a4paper}
+    % \fancyhfoffset[E,O]{0pt}
+    \fancyhead{}
+    \fancyfoot{}
+}
+
+% commande pour remettre les pages à la bonne taille
+\newcommand{\style}[1]{%
+\restoregeometry
+\pagestyle{#1}
+\logo{#1}
+}
+
+
+
 \pagestyle{plain}
 
 
@@ -396,6 +439,9 @@ bgcolor=grisClair,
 \usepackage{ifthen}
 \newcommand{\logo}[1]{%
   \ifthenelse{\equal{#1}{mb}}
+    {\icon{res/mini-mb.png}}
+    {}%
+  \ifthenelse{\equal{#1}{ft}}
     {\icon{res/mini-mb.png}}
     {}%
   \ifthenelse{\equal{#1}{mbpy}}

@@ -39,7 +39,11 @@ Les scénarios proposés dans cette brochure permettent tout cela : une approche
 
 Nous sommes des enseignants de maths/sciences regroupés au sein d’un groupe de recherche de l'IREM de Marseille.
 
+<<<<<<< HEAD
 ![](./res/fig-logo-ineflp.png)
+=======
+![](res/fig-logo-ineflp.png)
+>>>>>>> d8dbe17e14c781e52a3bc3a9df94e077294389c2
 
 
 Notre groupe, Innovation, Expérimentation et Formation en Lycée Professionnel (InEFLP) consacre une partie de son travail à l’enseignement de l’algorithmique en classes de lycée professionnel. Dans le cadre de cette recherche, nous explorons les objets connectés tels que Arduino, Micro:Bit, STM Education ou mbot.
@@ -48,6 +52,7 @@ Notre groupe, Innovation, Expérimentation et Formation en Lycée Professionnel 
 
 
 
+<<<<<<< HEAD
 ## Liens utiles
 
 * Page du groupe InEFLP
@@ -68,5 +73,27 @@ pour une prise en main de Micro:bit
 </br>http://url.univ-irem.fr/ineflp-microbit
 * Site IREM dédié à \mb] Site de ressources sur Micro:bit du groupe
 </br>http://url.univ-irem.fr/o
+=======
+## Liens utiles}
+
+* Page du groupe InEFLP -
+http://url.univ-irem.fr/ineflp
+* IREM de Marseille] Site académique de l'IREM de Marseille
+http://url.univ-irem.fr/mars
+* Portail des IREM] Site national des IREM -
+http://www.univ-irem.fr/
+* Formation à l'algorithmique LP et SEGPA -
+Padlet de utilisé lors de nos formations académiques
+http://url.univ-irem.fr/stage-algo
+* Collecte de ressources pour \mb - Padlet sur \mb utilisé en formation
+http://url.univ-irem.fr/algo2017-microbit
+* Brochure sur \mb - Publication de la C2i TICE (http://www.univ-irem.fr/spip.php?rubrique18)
+pour une prise en main de Micro:bit -
+http://url.univ-irem.fr/c2it-mb-t1-pdf
+* Description \mb] Fiche sommaire de description de Micro:bit -
+http://url.univ-irem.fr/ineflp-microbit
+* Site IREM dédié à \mb] Site de ressources sur Micro:bit du groupe -
+http://url.univ-irem.fr/o
+>>>>>>> d8dbe17e14c781e52a3bc3a9df94e077294389c2
 
 ![](res/fig-ineflp-qr.png)

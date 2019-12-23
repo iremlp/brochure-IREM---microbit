@@ -4,7 +4,7 @@ Sur ce dépot, vous trouverez notre brochure sur l'**enseignement des mathémati
 
 Téléchargement : 
 
-* **Attention**, [brochure **non finalisée en cours de rédaction**](main.pdf)
+* **Attention**, [brochure **non finalisée en cours de rédaction**](./../raw/master/main.pdf)
 
 # À propos de cette publication
 

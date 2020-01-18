@@ -1,0 +1,196 @@
+\style{mbpy}
+
+\section{Pile ou face communicant avec \mbpy}
+
+
+\subsection{Description}
+
+\subsubsection{Objectif}
+
+\begin{formule}
+Le but de ce projet est de simuler une expérience aléatoire de lancer de pièce truquée avec une carte \mb. et d'envoyer par radio l'issue afin de centraliser les résultats.
+Cette activité permet de prendre en main facilement l'interface de développement en python
+\end{formule}
+
+\subsubsection{Intérêt}
+Cette activité, idéale pour découvrir l'interface de programmation, propose d'utiliser python pour programmer une situation non-équiprobable et d'exploiter le module radio du \mb. 
+\begin{description}
+    \item [Production et traitement de données] Cette situation permet de travailler des notions de probabilités et de statistiques.
+    \item [Programmation Python] Cette activité nécessite que les élèves aient déjà été initié à Python, sans pour autant demandé une grande maîtrise.
+    
+\end{description}
+
+
+\subsubsection{Matériel}
+\begin{itemize}
+    \item 1 $\times$ \matosMb
+    \item 1 $\times$ IDE programmation python (Mu) \url{https://codewith.mu/} ou interface de programmation ligne \url{https://python.microbit.org/v/1.1}
+\end{itemize}
+
+\subsubsection{Progression proposée}
+
+
+%   bloc méthode
+%   titre + fond bleu
+\begin{methode}
+    On propose ici d'aborder la problématique en deux temps :
+    
+    \begin{enumerate}
+        \item \textbf{Tirage aléatoire et envoi des issues} \\
+            Les élèves doivent modéliser une expérience aléatoire avec une probabilité donnée, et envoyer l'issue par radio.
+        \item \textbf{Réception et traitement des données}\\
+            L'incrémentation des variables et le traitement des données est déclenchée par la réception d'un message radio.
+        
+            
+    \end{enumerate}
+\end{methode}
+
+
+%
+% activité de niveau 1
+%
+\newpage
+\subsection{Niveau simple}
+\subsubsection{Activité élève}
+
+% commande perso \CARTOUCHE
+%   5 paramètres : 
+%       * durée
+%       * public
+%       * travail en maths
+%       * travail en sciences
+%       * travail en algo
+\cartouche{0,5 h}{2de}{expérience aléatoire}{}{fonction ; événement ; boucle}
+
+
+
+
+\begin{eleve}
+\texttt{\scshape{Mission : }
+Programme \mb~pour simuler un lancer de \emph{Pile ou Face} truqué !}
+
+
+On veut que notre \emph{pièce virtuelle} ait 55\% de chance de tomber sur "pile".
+
+
+Le programme doit débuter avec les instructions ci-dessous afin :  
+\begin{enumerate}
+    \item d' importer les bibliothèques nécessaires ;
+\pyfile{1}{3}{./res/mbpy-pilecom.py}
+    \item allumer le mode radio ;
+\pyline{radio.on()}
+    \item lancer une boucle infinie et détecter si le \mb a été secoué ;
+\pyfile{15}{16}{./res/mbpy-pilecom.py}
+\end{enumerate}
+
+
+Il faut maintenant ajouter les fonctions pour : 
+\begin{enumerate}
+    \item effectuer un tirage aléatoire d'un nombre entre 1 et 100 avec \pyline{random.randint(,)} et comparer ce nombre à la probabilité voulue.
+    \item afficher \texttt{P} ou \texttt{F} \emph{selon l'issue du tirage} avec \pyline{dislay.show('')};
+    \item envoyer la valeur 'P' ou 'F' par radio \emph{selon l'issue du tirage} avec \pyline{radio.send('')}
+\end{enumerate}
+
+Vérifie ton code avec   \includegraphics[width=0.1\linewidth]{res/check.png} et flash-le sur la carte avec \includegraphics[width=0.1\linewidth]{res/flash.png}
+
+
+\end{eleve}
+
+
+\newpage
+\subsubsection{Notes pour l'enseignant}
+
+Ce premier niveau permet de se familiariser avec l’interface de l'IDE en produisant un premier programme fonctionnel et utile.
+Les notions de programmations utilisées sont:
+\begin{enumerate}
+    \item l'appel de fonction
+    \item la boucle \pyline{while}
+    \item la boucle \pyline{if}
+\end{enumerate}
+
+Dans cette première partie l'élève est aussi amené à concevoir une expérience aléatoire avec une probabilité donnée.
+
+\begin{methode}
+Pour résoudre ce problème, il suffit de programmer les instructions de la façon suivante : 
+\pyfile{1}{5}{./res/mbpy-pilecom.py}
+\pyfile{15}{17}{./res/mbpy-pilecom.py}
+\pyfile{19}{25}{./res/mbpy-pilecom.py}
+\end{methode}
+
+\begin{remarque}
+La variable \pyline{tirage} n'est pas indispensable, elle permet d'enregistrer le résultat du tirage aléatoire et de rendre le code plus lisible.
+
+L'instruction \pyline{sleep(10)} permet de faire une pause de 10 ms dans le programme.
+
+Afin de distinguer deux tirages successifs, on peut marquer une pause puis effacer l'écran à l'issue d'un tirage avec \pyline{display.clear()}, mais il peut-être amusant de montrer comment faire une animation simplement à partir d'une succession d'images.
+
+Par exemple la fonction anim() ci-dessous pourra être définie au début du programme puis appeler avant chaque tirage.
+\pyfile{14}{18}{./res/mbpy-pilecom.py}
+
+\end{remarque}
+
+
+
+%
+% activité de niveau 2
+%
+\newpage
+\subsection{Niveau Expert}
+\subsubsection{Activité élève}
+
+% commande perso \CARTOUCHE
+%   5 paramètres : 
+%       * durée
+%       * public
+%       * travail en maths
+%       * travail en sciences
+%       * travail en algo
+\cartouche{0,5 h}{2de}{fréquences}{}{fonction ; événement ; variable}
+
+
+
+\begin{eleve}
+\texttt{\scshape{Mission : }
+Réceptionne les données envoyées par les autres \mb et exploite-les pour tracer un \emph{graphique}}
+
+Dans l'activité précédente nous avons créer une \emph{pièce virtuelle} qui affiche 'P' ou 'F' et qui envoie cette information par radio.
+Nous allons programmer le \mb afin de recevoir, traiter et afficher les données. 
+
+
+Le programme précédent devra être complété avec les éléments suivants :
+\begin{enumerate}
+    \item une déclaration de variables pour dénombrer les 'P' et les 'F', comme par exemple \pyline{p = 0}, qu'il faut écrire \emph{avant} la boucle \pyline{while True:}
+    \item la réception d'un message radio (que l'on pourra enregistrer dans une variable 'issue') avec la fonction \pyline{radio.receive()} ;
+    \item l'incrémentation des variables décomptant les 'P' et les 'F' par exemple \pyline{p = p + 1} ;
+    \item le calcul de fréquence de 'P' et de 'F' (attention il faudra veiller à ne pas diviser par 0);
+    \item l'affichage des fréquences dans le plotter avec \pyline{print((a,b))} où '(a,b)' est le couple de fréquences de 'P' et de 'F' dont on souhaite voir l'évolution au cours du temps.
+\end{enumerate}
+
+
+
+Vérifie ton code avec   \includegraphics[width=0.1\linewidth]{res/check.png} et flashe-le sur la carte avec \includegraphics[width=0.1\linewidth]{res/flash.png}.
+
+Avant d'afficher le plotter avec \includegraphics[width=0.1\linewidth]{res/plotter.png}, il faudra peut-être faire un reset de la carte.  
+
+
+\end{eleve}
+
+
+\newpage
+\subsubsection{Notes pour l'enseignant}
+
+Cette deuxième activité nécessite impérativement l'usage de variables.
+
+La difficulté peut provenir des différents cas de figure à traiter, mais à part l'instruction \pyline{else:}, il n'y a pas de nouveaux types d'instruction.
+
+Les notions de programmations utilisées sont:
+\begin{enumerate}
+    \item la déclaration et l'initialisation de variables
+    \item la boucle \pyline{if}, complété par \pyline{else}
+\end{enumerate}
+
+Dans cette partie l'élève est aussi amené à calculer des fréquences, mais l'exécution de ce calcul doit être conditionné à la non nullité de la somme des variables.
+
+\begin{methode}
+Pour recevoir et exploiter les données, il est possible de programmer les instructions de la façon suivante : \pyfile{1}{38}{./res/mbpy-pilecom.py}
+\end{methode}

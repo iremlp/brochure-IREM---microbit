@@ -1,7 +1,7 @@
 # Dossier à ignore
 source/_minted*
 
-# Fichiers de compilation
+Fichiers de compilation
 source/*.gz
 source/*.toc
 source/*.pyg
@@ -11,5 +11,16 @@ source/*.aux
 source/*.fls
 source/*.fdb*
 
+fiches/*.gz
+fiches/*.toc
+fiches/*.pyg
+fiches/*.log
+fiches/*.out
+fiches/*.aux
+fiches/*.fls
+fiches/*.fdb*
+
+
+
 # PDF compilés
-#source/*.pdf
+source/*.pdf

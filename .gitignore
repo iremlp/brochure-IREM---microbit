@@ -11,5 +11,5 @@ source/*.aux
 source/*.fls
 source/*.fdb*
 
-# PDF compiles en trop
-source/*.pdf
+# PDF compilés
+#source/*.pdf

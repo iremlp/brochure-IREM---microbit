@@ -1,18 +1,9 @@
-%   style de la page + logo
-%   commenter avec % le style non utilisé
-\style{mb} %pour microbit
-%\style{mbot} %pour mbot
-%\style{st} %pour ST
-%\style{mq} % pour maqueen
-%\style{mbpy} % pour microbit & python
 
+\style{mb} %pour microbit
 
 %   Titre de la sous sections
 \section{Superviser le travail des élèves sur \mb}
 
-
-
-\style{mb}
 
 \subsection{Description}
 
@@ -23,21 +14,22 @@
 %   sans titre et fond bleu cyan
 \begin{formule}
 Le suivi individuel des élèves est un critère majeur de réussite d'une activité. 
-l'interface \mb |classroom va permettre de superviser l'avancement de chaque élèves, 
-afin de lui proposer un travail en rapport avec ses capacités.\ldots
+L'interface \includegraphics[scale=0.3]{res/classroom_logo.png} va permettre de superviser 
+l'avancement de chaque élève, afin de lui proposer un travail en rapport avec ses capacités.
 \end{formule}
 
 
 \subsubsection{Intérêt}
 
-Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:\ldots
+Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
 
 %liste d'arguments
 \begin{description}
-    \item [1er argument] proposer une situation initiale en block ou en python
-    \item [2ème argument] suivre en direct le travail des élèves
-    \item [3ème argument] partager un code entre élèves de façon globale ou ciblée
-    \item [4ème argument] récupérer une séance de travail afin de la poursuivre ultérieurement
+    \item [proposer] une situation initiale en bloc ou en python
+    \item [suivre] en direct le travail des élèves
+    \item [partager] un code entre élèves de façon globale ou ciblée
+    \item [sauvegarder] une séance de travail
+    \item [reprendre] une séance là où elle s'était arrêtée
 \end{description}
 
 
@@ -46,110 +38,139 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:\l
 %   matériel pour micro:bit
     \item 1 $\times$ \matosMb \emph{(facultatif car le simulateur peut suffire)}
 %   site pour micro:bit
-    \item 1 $\times$ accès internet : IDE programmation par bloc \url{http://makecode.microbit.org/}
-%   matériel pour ST
-    \item navigateur Chrome
+    \item 1 $\times$ accès internet : \url{http://classroom.microbit.org/}
+%   
+    \item navigateur Chrome\textregistered
 \end{itemize}
 
 
+\begin{remarque}
+    La simplicité est le maître de mot de classroom, et tout a été conçu dans cette optique :
+     la création, la connexion, le partage, la sauvegarde...
+     Avec évidemment des avantages et des inconvénients.
 
-\subsubsection{Remarques}
+    \begin{itemize}
+        \item \textbf{Avantage} : pas de compte élève ou enseignant à créer.
+        \item \textbf{Avantage} : un fichier html de récupération contenant toute la session.
+        \item \textbf{Avantage} : un fichier de compte rendu au format texte contenant les programmes des élèves.
+        \item \textbf{Inconvénient} : l'identification des élèves repose sur la confiance.
+        \item \textbf{Inconvénient} : une usurpation d'identité est possible lors de la reprise d'une activité.
+    \end{itemize}
+\end{remarque}
 
+\newpage
+\subsection{Mode d'emploi de Classroom}
 
-%   bloc méthode
-%   titre + fond bleu
+\subsubsection{Créer une Classroom}
+
 \begin{methode}
-    Quelques détails
-    \ldots % points de suspensions
+    Ouvrir le navigateur Chrome et rejoindre le site \url{http://classroom.microbit.org/}.
+    Il suffit de donner le nom de l'activité, le type d'environnement de programmation (bloc ou python),
+     et c'est parti.
+     \vspace{5mm}
 
-    \begin{enumerate}
-        \item \textbf{Initiation - Premier modèle.} \\
-            bla bla\ldots % points de suspensions
-        \item \textbf{Intermédiaire - Pile ou Face.}\\
-            bla bla\ldots % points de suspensions
-    \end{enumerate}
+    
+    \centerline{\includegraphics[width=0.7\linewidth]{res/classroom_setup2.png}}~\\
 \end{methode}
 
-%
-% activité de niveau
-%
+\begin{remarque}
+    Il est possibe de choisir si l'on souhaite autoriser l'application à enregistrer des données
+     localement (dans le "local storage" du navigateur), à éviter si l'ordinateur est partagé 
+     mais utile si l'on craint de perdre son travail.
+\end{remarque}
+\vspace{5mm}
 
-%   saut de page
-\newpage
-
-%   titre de la sous section
-\subsection{Niveau initiation - \ldots}
-
-\subsubsection{Activité élève}
-
-% commande perso \CARTOUCHE
-%   5 paramètres :
-%       * durée
-%       * public
-%       * travail en maths
-%       * travail en sciences
-%       * travail en algo
-\cartouche
-{0,5 h}         %durée
-{2de}           %public
-{calcul}        %maths
-{mouvement}     %sciences
-{boucles}       %algo
+\subsubsection{Proposer un programme}
 
 
-%   petite image de logo qui va
-%   se mettre dans le bloc élève
-\begin{wrapfigure}[4]{r}{3cm}
-    \includegraphics[width=\linewidth]{res/st-pf-00.png}
-\end{wrapfigure}
-
-%   bloc élève
-%   fond orange
-\begin{eleve}
-    \texttt{\textsc{Ta Mission} : Utiliser\ldots avec \emph{énergie}!}
-
-%   ajout d'une image
-    \includegraphics[width=0.5\linewidth]{res/st-pf-00-eleve.png}
-\end{eleve}
-
-
-
-\subsubsection{Notes pour l'enseignant}
-
-%
-%   méthode et remarque
-%
 \begin{methode}
-Proposition de résolution :
+    Dans le bandeau supérieur on trouve le menu de ce qui correspond aux 4 étapes
+     de la vie d'une session :
+     \begin{enumerate}
+        \item Création du code dans l'éditeur
+        \item Partage de la session
+        \item Supervision des travaux
+        \item Sauvegarde et clôture d'une session         
+     \end{enumerate}~\\
 
-bla bla\ldots
+    \centerline{\includegraphics[width=0.8\linewidth]{res/classroom_menu.png}}
+    
+    Il faut donc commencer par ouvrir l'éditeur (ici pour la programmation en blocs) et écrire
+    un programme ou un début de programme (par exemple celui proposé par la fiche "pile ou face").
+    \vspace{5mm}
+
+    \centerline{\includegraphics[width=0.6\linewidth]{res/classroom_editor.png}}~\\
+
+    Une fois le code terminé, il ne faut pas oublier de le partager en cliquant sur le bouton
+     "Share code with students".
+
 \end{methode}
 
 
 \begin{remarque}
-    La proposition de solution \emph{interactive} est accessible en ligne \url{https://makecode.com/_EMYM0YfT11A6}.
+    L'éditeur comporte les mêmes fonctionnalités que sur \url{http://makecode.microbit.org}, il est donc possible de :
+    \begin{itemize}
+        \item télécharger le code.
+        \item appairer la carte \mb avec le navigateur.
+        \item ouvrir un programme compilé sous la forme d'un fichier .hex en faisant glisser ce fichier
+        dans la fenêtre de classroom.
+        
+    \end{itemize}
+    
+    Le code pourra être modifié ultérieurement pour être distribué à toute la classe ou de façon ciblée,
+     ce qui permet un travail de différenciation.
+ 
 \end{remarque}
 
+\vspace{5mm}
 
-%
-%   méthode et remarque V2
-%   version sur 2 colonnes
-%   pour cela utiliser l'environnement minipage
+\subsubsection{Partager la session}
 
-%   colonne de gauche
-\begin{minipage}[t]{0.7\linewidth}
-    \begin{methode}~\\
-    Proposition de résolution :
+\begin{methode}
+    Pour se connecter à la session, les élèves doit aller sur le site :  \url{http://microbit.org/join}
+     renseigner le nom de la classe (l'occasion de réviser son vocabulaire anglais)
+    et rentrer le code PIN.
+    \vspace{5mm}
 
-    bla bla\ldots
-    \end{methode}
-\end{minipage}
-%   petit "ressort"
-%   pour centrer les 2 colonnes
-\hfill
-%   colonne de droite
-\begin{minipage}[t]{0.3\linewidth}
-    \begin{remarque}~\\
-        La proposition de solution \emph{interactive} est accessible en ligne \url{https://makecode.com/_EMYM0YfT11A6}.
-    \end{remarque}
-\end{minipage}
+    \centerline{\includegraphics[width=0.6\linewidth]{res/classroom_dashboard2.png}}
+    
+\end{methode}
+
+
+\newpage
+\vspace{5mm}\\
+
+\begin{remarque}
+    Une fois connectés, les élèves renseigneront leur nom tel qu'il apparaîtra sur votre écran,
+    mais aussi tel sera enregistrer dans le fichier de sauvegarde et de compte-rendu, attention
+    aux noms fantaisistes.
+    
+\end{remarque}
+
+\vspace{5mm}
+
+\subsubsection{Superviser les travaux}
+
+\begin{methode}
+        Dans cette fenêtre, la liste des élèves apparaît à gauche avec l'indication 
+        de l'état de son travail : en cours ou terminé avec en prime une autoévaluation sous la
+        forme de smiley.\\
+        Dans la partie droite apparait le travail de l'élève dont les modifications sont instantannément
+        reportées. Là encore on retrouve le bouton "Share code with students" qui permet d'envoyer à tout
+        ou une partie de la classe le code produit par un élève.
+
+    \vspace{5mm}
+    
+    \centerline{\includegraphics[width=0.6\linewidth]{res/classroom_studentCode2.png}}
+    
+
+
+\end{methode}
+
+\begin{remarque}
+    Pour l'éditeur de programmation par bloc, seul les blocs actifs côté élève
+    apparaitront dans la fenêtre de supervision.
+
+    
+\end{remarque}
+

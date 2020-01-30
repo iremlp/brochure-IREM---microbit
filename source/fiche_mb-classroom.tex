@@ -21,15 +21,17 @@ l'avancement de chaque élève, afin de lui proposer un travail en rapport avec 
 
 \subsubsection{Intérêt}
 
-Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
+\mb \texttt{|classroom} est un espace de programmation partagé entre les élèves et leur enseignant.\\
+Cet outil en ligne permet de :
+
 
 %liste d'arguments
 \begin{description}
-    \item [proposer] une situation initiale en bloc ou en python
-    \item [suivre] en direct le travail des élèves
-    \item [partager] un code entre élèves de façon globale ou ciblée
-    \item [sauvegarder] une séance de travail
-    \item [reprendre] une séance là où elle s'était arrêtée
+    \item [proposer] une situation initiale en bloc ou en python ;
+    \item [suivre] en direct le travail des élèves ;
+    \item [partager] du code entre élèves de façon globale ou ciblée ;
+    \item [sauvegarder] une séance de travail ;
+    \item [reprendre] une séance là où elle s'était arrêtée.
 \end{description}
 
 
@@ -45,18 +47,36 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
 
 
 \begin{remarque}
-    La simplicité est le maître de mot de classroom, et tout a été conçu dans cette optique :
-     la création, la connexion, le partage, la sauvegarde...
-     Avec évidemment des avantages et des inconvénients.
+    Le parti pris de l'application est la \textbf{simplicité} avec ses avantages et ses inconvénients.
 
+\begin{multicols*}{2} 
+
+    \textbf{Avantages : }
     \begin{itemize}
-        \item \textbf{Avantage} : pas de compte élève ou enseignant à créer.
-        \item \textbf{Avantage} : un fichier html de récupération contenant toute la session.
-        \item \textbf{Avantage} : un fichier de compte rendu au format texte contenant les programmes des élèves.
-        \item \textbf{Inconvénient} : l'identification des élèves repose sur la confiance.
-        \item \textbf{Inconvénient} : une usurpation d'identité est possible lors de la reprise d'une activité.
+        \item Pas de compte utilisateurs élève/enseignant à créer.
+        \item Fichier unique de sauvegarde/récupération pour reprendre la session plus tard (format \texttt{.html}).
+        \item Compte rendu de la session téléchargeable (format texte \texttt{.docx}).
     \end{itemize}
+
+\columnbreak
+
+    \textbf{Inconvénients :}
+    \begin{itemize}
+        \item L'identification des élèves repose sur la confiance (possibilité d'usurpation d'identité lors de la reprise d'une activité).
+        \item Pas d'éditeur de texte pour échanger avec les élèves.
+    \end{itemize}
+
+\end{multicols*}
+
+
+
 \end{remarque}
+
+
+\begin{remarque}
+\textbf{Attention} la version présentée ici est la version \texttt{beta} de classroom. Les menus encore en anglais sont amenés à évoluer (ou pas...)
+\end{remarque}
+
 
 \newpage
 \subsection{Mode d'emploi de Classroom}
@@ -87,10 +107,10 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
     Dans le bandeau supérieur on trouve le menu de ce qui correspond aux 4 étapes
      de la vie d'une session :
      \begin{enumerate}
-        \item Création du code dans l'éditeur
-        \item Partage de la session
-        \item Supervision des travaux
-        \item Sauvegarde et clôture d'une session         
+        \item Création du code dans l'éditeur.
+        \item Partage de la session.
+        \item Supervision des travaux.
+        \item Sauvegarde et clôture d'une session.
      \end{enumerate}~\\
 
     \centerline{\includegraphics[width=0.8\linewidth]{res/classroom_menu.png}}
@@ -117,7 +137,7 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
         
     \end{itemize}
     
-    Le code pourra être modifié ultérieurement pour être distribué à toute la classe ou de façon ciblée,
+    Le code peut être modifié ultérieurement pour être distribué à toute la classe ou de façon ciblée,
      ce qui permet un travail de différenciation.
  
 \end{remarque}
@@ -127,7 +147,7 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
 \subsubsection{Partager la session}
 
 \begin{methode}
-    Pour se connecter à la session, les élèves doit aller sur le site :  \url{http://microbit.org/join}
+    Pour se connecter à la session, les élèves doivent aller sur le site :  \url{http://microbit.org/join}
      renseigner le nom de la classe (l'occasion de réviser son vocabulaire anglais)
     et rentrer le code PIN.
     \vspace{5mm}
@@ -142,7 +162,7 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
 
 \begin{remarque}
     Une fois connectés, les élèves renseigneront leur nom tel qu'il apparaîtra sur votre écran,
-    mais aussi tel sera enregistrer dans le fichier de sauvegarde et de compte-rendu, attention
+    mais aussi tel qu'il sera enregistré dans le fichier de sauvegarde et de compte-rendu, attention
     aux noms fantaisistes.
     
 \end{remarque}
@@ -153,8 +173,8 @@ Plus qu'un simple partage de code, l'interface \mb |classroom va permettre de:
 
 \begin{methode}
         Dans cette fenêtre, la liste des élèves apparaît à gauche avec l'indication 
-        de l'état de son travail : en cours ou terminé avec en prime une autoévaluation sous la
-        forme de smiley.\\
+        de l'état de son travail : en cours ou terminé (avec en prime une autoévaluation sous la
+        forme de smiley).\\
         Dans la partie droite apparait le travail de l'élève dont les modifications sont instantannément
         reportées. Là encore on retrouve le bouton "Share code with students" qui permet d'envoyer à tout
         ou une partie de la classe le code produit par un élève.

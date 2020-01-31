@@ -4,7 +4,7 @@
 # 
 # ~/github/brochure-IREM---microbit/source$ ./compile_une_fiche.sh ./fiche_mb-classroom.te
 #
-pdflatex --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -recorder -jobname="$1" mainShort.tex
+pdflatex --shell-escape -synctex=1 -interaction=nonstopmode -file-line-error -recorder -jobname="$1" mainShort_script.tex
 mv "$1".pdf ./../fiches/
 rm -rf ./_minted-.
 rm "$1".*

@@ -2,11 +2,10 @@ Brochure du groupe IREM InEFLP - Micro:bit
 
 Sur ce dépot, vous trouverez notre brochure sur l'**enseignement des mathématiques avec les objets connectés**.
 
-Téléchargements : 
+Téléchargements - **Attention**, brochure **non finalisée** en cours de rédaction
 
-* *(brochure complète)* : **Attention**, [brochure **non finalisée en cours de rédaction**](https://raw.githubusercontent.com/iremlp/brochure-IREM---microbit/master/main.pdf)
-
-* *(fiches individuelles)* : [dossier](./fiches/)
+* [Brochure complète](https://raw.githubusercontent.com/iremlp/brochure-IREM---microbit/master/main.pdf)
+* [Fiches individuelles](./fiches/)
 
 
 # À propos de cette publication

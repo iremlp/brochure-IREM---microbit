@@ -20,7 +20,7 @@ En effet, les enseignants utilisent déjà les outils numériques. Par exemple, 
 Est-ce donc juste un effet de mode de faire cours avec les robots (Thymio, Mbot), les objets  programmables et connectés (Arduino, Micro:bit, STM education, Raspberry Pi) ou est-ce une nouvelle façon d'aborder notre enseignement?
 Ces nouvelles possibilités technologiques, forcément chronophages, nous permettront-elles de traiter un contenu disciplinaire exigeant dans un cadre institutionnel contraignant?
 
-Nous n'avons bien sûr pas toutes les réponses à ces questions mais nous pensons que lorsqu'il est accompagné de certains de ces outils, notre enseignement a beaucoup à y gagner.
+Nous n'avons bien sûr pas toutes les réponses à ces questions mais nous pensons qu'accompagné de certains de ces outils, notre enseignement a beaucoup à y gagner.
 
 L'introduction de l'algorithmique en lycée professionnel nous interroge. Longtemps il nous a semblé impensable et inenvisageable d'avoir à enseigner un langage de programmation comme Python auprès d'un public d'élèves globalement en difficulté avec les mathématiques. Fort de ce constat, nous avons cherché les moyens de lier les mathématiques à la logique et au raisonnement algorithmique. C'est pourquoi nous avons exploré les potentialités des objets connectés.
 

@@ -6,7 +6,7 @@ Téléchargements :
 
 * *(brochure complète)* : **Attention**, [brochure **non finalisée en cours de rédaction**](https://raw.githubusercontent.com/iremlp/brochure-IREM---microbit/master/main.pdf)
 
-* *(fiches individuelles)* : [dossier](./tree/master/fiches/)
+* *(fiches individuelles)* : [dossier](./fiches/)
 
 
 # À propos de cette publication

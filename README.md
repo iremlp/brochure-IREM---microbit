@@ -5,7 +5,7 @@ Sur ce dépot, vous trouverez notre brochure sur l'**enseignement des mathémati
 Téléchargements - **Attention**, brochure **non finalisée** en cours de rédaction
 
 * [Brochure complète](https://raw.githubusercontent.com/iremlp/brochure-IREM---microbit/master/main.pdf)
-* [Fiches individuelles](./fiches/)
+* [Fiches individuelles](https://github.com/iremlp/brochure-IREM---microbit/tree/master/fiches)
 
 
 # À propos de cette publication
@@ -61,17 +61,6 @@ Notre groupe, Innovation, Expérimentation et Formation en Lycée Professionnel 
 </br>http://url.univ-irem.fr/mars
 * Portail des IREM] Site national des IREM
 </br>http://www.univ-irem.fr/
-* Formation à l'algorithmique LP et SEGPA
-Padlet de utilisé lors de nos formations académiques
-</br>http://url.univ-irem.fr/stage-algo
-* Collecte de ressources pour \mb - Padlet sur \mb utilisé en formation
-</br>http://url.univ-irem.fr/algo2017-microbit
-* Brochure sur \mb - Publication de la C2i TICE (http://www.univ-irem.fr/spip.php?rubrique18)
-pour une prise en main de Micro:bit
-</br>http://url.univ-irem.fr/c2it-mb-t1-pdf
-* Description \mb] Fiche sommaire de description de Micro:bit
-</br>http://url.univ-irem.fr/ineflp-microbit
-* Site IREM dédié à \mb] Site de ressources sur Micro:bit du groupe
-</br>http://url.univ-irem.fr/o
+
 
 ![](source/res/fig-ineflp-qr.png)
